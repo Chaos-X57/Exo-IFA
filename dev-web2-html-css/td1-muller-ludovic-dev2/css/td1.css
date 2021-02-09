@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: cornflowerblue;
+}
+
+body {
+  width: 400px;
+  margin: 20px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+input {
+  margin-left: 20px;
+  border: none;
+}
+
+div {
+  margin-left: 50px;
+}
+
+textarea {
+  margin-left: 70px;
+}
+
+#nbrcara {
+  margin-left: 280px;
+  color: red;
+  display: none;
+}
+
+#bouton_envoi {
+  width: 280px;
+  margin-left: 60px;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: violet;
+  color: white;
+}
+
+hr {
+  width: 80%;
+}
+
+i {
+  margin-left: 50px;
+}

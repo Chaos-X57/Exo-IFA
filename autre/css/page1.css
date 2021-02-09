@@ -1,0 +1,104 @@
+/* ------------- Mobile First --------------- */
+div {
+  margin-bottom: 10px;
+  text-align: justify;
+  overflow: auto;
+}
+
+#enTete {
+  height: 30px;
+}
+
+#corps {
+  color: white;
+  padding: 15px;
+}
+
+#tags {
+  height: 30px;
+}
+
+#author, #pub1 {
+  display: inline-block;
+  width: 40%;
+  max-height: 80px;
+}
+
+#pub1 {
+  float: right;
+}
+
+#pub2 {
+  height: 80px;
+}
+
+#pub3 {
+  height: 40px;
+}
+
+
+@media screen and (min-width: 800px) {
+  #corps {
+    width: 80%;
+  }
+
+  #pub1 {
+    position: absolute;
+    top: 77px;
+    right:0;
+    width: 15%;
+    max-height: 250px;
+  }
+
+  #pub2, #pub3 {
+    clear: both;
+    position: relative;
+    width: 15%;
+    left: 85%;
+    bottom: 160px;
+  }
+
+  #tags {
+    width: 50%;
+    height: 80px;
+    float: left;
+  }
+
+  #author {
+    width: 25%;
+    float: left;
+    margin-left: 5%;
+  }
+
+}
+
+@media print {
+
+  div {
+    border: 1px solid black;
+  }
+
+  #pub1, #pub2, #pub3 {
+    display: none;
+  }
+
+  #corps {
+    width: 80%;
+    margin-right: 5%;
+  }
+
+  #tags, #author {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 15%;
+  }
+
+  #tags {
+    top: 77px;
+  }
+
+  #author {
+    top: 117px;
+  }
+}

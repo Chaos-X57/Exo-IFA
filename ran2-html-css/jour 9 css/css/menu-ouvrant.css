@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  transition: all .4s;
+}
+
+body {
+  margin: 0;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 18px;
+}
+
+/* déco */
+
+header {
+  text-align: center;
+  background-color: lightblue;
+  padding: 20px;
+}
+
+main {
+  max-width: 400px;
+  margin: 60px auto;
+}
+
+/* css du menu */
+/* tous les ul du menu */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* uniquement le ul parent */
+.dropdown {
+  display: block;
+  background: #1374ac;
+  position: relative;
+}
+
+.dropdown a {
+  color: #fff;
+  text-decoration: none;
+} 
+
+/* ici je sélectionne le a qui 
+est l'enfant direct de la li qui est l'enfant 
+directe du .dropdown */
+.dropdown > li > a {
+  display: block;
+  position: relative;
+  padding: 10px;
+  line-height: 20px;
+  background-color: #1374ac;
+  z-index: 2;
+}
+.dropdown > li > a:hover {
+  background-color: #5bb5ec;
+}
+
+.dropdown-items {
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #2e97d8;
+  transform-origin: top center;
+  transform: scaleY(0) translateY(-100%);
+  /* préparer le navigateur à réaliser les animations */
+  will-change: transform, opacity;
+}
+
+/* selecteur qui gère le survol */
+.dropdown > li:hover .dropdown-items {
+  opacity: 1;
+  transform: scaleY(1) translateY(0%);
+}
+
+.dropdown-items li a {
+  display: block;
+  padding: 10px;
+  line-height: 20px;
+  width: 100%;
+  /* préparer le navigateur à réaliser les animations */
+  will-change: background-color, transform, opacity;
+}
+
+.dropdown-items li a:hover {
+  background-color: #5bb5ec;
+  transform: translateX(6px);
+  width: calc(100% - 6px);
+}

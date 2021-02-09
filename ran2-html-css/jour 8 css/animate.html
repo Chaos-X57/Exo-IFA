@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animate (keyframes)</title>
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+  
+
+  <div class="cuby">
+    :)
+  </div>
+
+  <button onclick="toggleAnimation()">Cliquer ici</button>
+
+
+  <script>
+  // fonction déclenchée au click sur le bouton
+  function toggleAnimation(){
+    //cherche le cube nommé '.cuby'
+    let cuby = document.querySelector('.cuby')
+
+    //avec cuby, toggle(alterne) la class cuby-animation
+    cuby.classList.toggle('cuby-animation');
+  }
+  </script>
+</body>
+</html>

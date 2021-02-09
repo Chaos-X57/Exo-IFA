@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 16px/24px 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* reset de list (on enlève les styles du navigateur) */
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* style toutes les li */
+
+.menu li {
+  display: inline-block;
+  border-right: 1px solid black;
+  line-height: 20px;
+  padding: 0px 20px;
+}
+
+/* style uniquement le dernier élément 'li' de la liste  */
+.menu li:last-child {
+  border: none;
+}
+
+/* style uniquement le 'a' qui se trouve dans premier élément 'li' de la liste  */
+.menu li:first-child a {
+  color: red;
+}
+
+/* nth-child(index) vise l'élément 'a' qui est dans la 'li' qui a l'index 3 dans la liste des 'li's */
+.menu li:nth-child(3) a {
+  color: green;
+}
+
+/* on peut viser n'importe quelle série de balises, ici des paragraphes se suivent, on cherche le 2e paragraphe: */
+
+p:nth-child(2) {
+  color: gray;
+}
+
+
+/* C'est très utilisé dans les tableaux */
+
+.table {
+  width: 100%;
+  border: 1px solid lightgrey;
+}
+.table td {
+  padding: 10px;
+  border: 1px solid lightgrey;
+}
+
+.table tr:nth-child(2n) {
+  background-color: lightgrey;
+}
+
+/* expression complexe : toute les 2 lignes mais en commençant à la 4e ligne */
+.table tr:nth-child(2n+4) {
+  background-color: #727272;
+}

@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #060e1b;
+  background-color: #060e1b;
+  color: white;
+}
+
+#menu {
+  position: absolute;
+  left: 25%;
+  width: 50vw;
+  height: 42vw;
+  margin: 50px auto;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  background-image: url("../images/onde.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#menu ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+#menu ul li {
+  margin: 8px;
+}
+
+#menu a {
+  padding: 10px;
+  font-size: 1.5vw;
+  text-decoration: none;
+  color: white;
+}
+
+#menu a:hover {
+  color: white;
+}
+
+li:hover a {
+  background-color: red;
+  border-radius: 50%;
+}
+
+#menu h1 {
+  margin-bottom: 30px;
+  font-size: 2vw;
+}
+
+img {
+  width: 50%;
+  margin-bottom: 20px;
+  border-radius: 20%;
+}
+
+canvas {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  opacity: 1;
+}

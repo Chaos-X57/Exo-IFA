@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Td Poule Muller Ludovic Dev2</title>
+
+  <style>
+
+    html {
+      background-color: darkgrey;
+    }
+
+    body {
+      width: 755px;
+      margin: 0 auto;
+      text-align: center;
+      border: 1px solid black;
+      border-radius: 20px;
+      transform: translateY(80px);
+      background-color: white;
+      box-shadow: 2px 2px 2px black;
+    }
+
+    h1 {
+      text-decoration: underline;
+    }
+
+    .error {
+      display: none;
+      color: red;
+      font-weight: bold;
+    }
+  
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      box-shadow: 1px 1px 1px black;
+    }
+
+    select {
+      box-shadow: 1px 1px 1px black;
+    }
+
+    #beige {
+      color: rgb(243, 184, 107);
+    }
+
+    #bleu {
+      color: blue;
+    }
+
+    #vert {
+      color: green;
+    }
+
+    #brun {
+      color: brown;
+    }
+  
+    #div2 {
+      display: none;
+    }
+
+    #tablePoule {
+      text-align: center;
+    }
+  
+    #div3 {
+      color: green;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  
+    .addPoule {
+      background-color: black;
+      color: white;
+      margin: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .addPoule:hover {
+      width: 30%;
+      font-size: 15px;
+      background-color: green;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+  
+    .affPoule {
+      background-color: black;
+      color: white;
+      margin: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .affPoule:hover {
+      width: 20%;
+      font-size: 15px;
+      background-color: green;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    #okay {
+      display: none;
+      color: green;
+      font-weight: bold;
+    }
+
+    .delPoule {
+      font-weight: bold;
+    }
+
+    .delPoule:hover {
+      font-weight: bold;
+      color: white;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Gères tes Poules.fr</h1>
+
+  <div id="div1">
+    <label for="race">Race</label>
+    <br>
+    <input type="text" name="race" id="race1"> <span id="errorRace" class="error"> Saisir une race</span>
+    <br>
+    <br>
+    <label for="nom">Nom</label>
+    <br>
+    <input type="text" name="nom" id="nom"> <span id="errorNom" class="error"> Saisir un nom</span>
+    <br>
+    <br>
+    <label for="poule">Couleur de la poule</label>
+    <br>
+    <input type="text" name="poule" id="poule1"> <span id="errorPoule" class="error"> Saisir une couleur de poule</span>
+    <br>
+    <br>
+    <label for="oeuf">Couleur de l'oeuf</label>
+    <br>
+    <select name="oeuf" id="oeuf">
+      <option value="">Couleur de l'oeuf</option>
+      <option value="Beige" id="beige">Beige</option>
+      <option value="Bleu" id="bleu">Bleu</option>
+      <option value="Vert" id="vert">Vert</option>
+      <option value="Brun" id="brun">Brun</option>
+      <option value="Blanc">Blanc</option>
+    </select> <span id="errorOeuf" class="error"> Choisir une couleur d'oeuf</span>
+    <br>
+    <br>
+    <label for="jour">Jour de la semaine</label>
+    <br>
+    <select name="jour" id="jour">
+      <option value="">Jour de la semaine</option>
+      <option value="Lundi">Lundi</option>
+      <option value="Mardi">Mardi</option>
+      <option value="Mercredi">Mercredi</option>
+      <option value="Jeudi">Jeudi</option>
+      <option value="Vendredi">Vendredi</option>
+      <option value="Samedi">Samedi</option>
+      <option value="Dimanche">Dimanche</option>
+    </select> <span id="errorJour" class="error"> Choisir un jour</span>
+    <br>
+    <br>
+    <label for="nombre">Nombre d'oeuf par jours</label>
+    <br>
+    <input type="text" name="nombre" id="nombre"> <span id="errorNombre" class="error"> Saisir nombre d'oeuf par jours</span>
+  </div>
+
+  <div id="div2">
+    <table id="tablePoule" border="1">
+
+    </table>
+    <br>
+    <br>
+    <div id="div3"></div>
+  </div>
+  <br>
+  <br>
+  <div id="okay"></div>
+  <button type="button" onclick="add()" class="addPoule">Ajouter une poule</button>
+  <br>
+  <button type="button" onclick="aff()" class="affPoule">Voir poules</button>
+  <br>
+  <button type="button" onclick="del()" class="delPoule">Reset</button>
+</body>
+
+<script>
+
+  var poules = [];
+  var coutTota = 0;
+
+  function add() {
+
+    document.getElementById('div1').style.display = 'block'
+    document.getElementById('div2').style.display = 'none'
+
+    var race1 = document.getElementById('race1').value;
+    var nom = document.getElementById('nom').value;
+    var couleur1 = document.getElementById('poule1').value;
+    var couleurOeuf = document.getElementById('oeuf').value;
+    var jourSemaine = document.getElementById('jour').value;
+    var nombreJour = document.getElementById('nombre').value;
+    var nombreSemaine;
+    var nombreMois;
+    var nombreAnnee;
+    var cout;
+
+    if (race1 == '') {
+      document.getElementById('errorRace').style.display='block';
+    }
+    else {
+      document.getElementById('errorRace').style.display='none';
+    }
+
+    if (nom == '') {
+      document.getElementById('errorNom').style.display='block';
+    }
+    else {
+      document.getElementById('errorNom').style.display='none';
+    }
+
+    if (couleur1 == '') {
+      document.getElementById('errorPoule').style.display='block';
+    }
+    else {
+      document.getElementById('errorPoule').style.display='none';
+    }
+
+    if (couleurOeuf == '') {
+      document.getElementById('errorOeuf').style.display='block';
+    }
+    else {
+      document.getElementById('errorOeuf').style.display='none';
+    }
+
+    if (jourSemaine == '') {
+      document.getElementById('errorJour').style.display='block';
+    }
+    else {
+      document.getElementById('errorJour').style.display='none';
+    }
+
+    if (nombreJour == '') {
+      document.getElementById('errorNombre').style.display='block';
+    }
+    else {
+      document.getElementById('errorNombre').style.display='none';
+    }
+
+    if (race1 != '' && nom != '' && couleur1 !='' && couleurOeuf != '' && jourSemaine != '' && nombreJour != ''){
+
+      var getPoule = poules.find(poule => poule.name === nom, jour => jour.name === jourSemaine);
+
+      if (getPoule) {
+        alert('Cette poule est déjà présente !')
+      }
+      else {
+        nombreSemaine = Math.round(nombreJour*7);
+        nombreMois = Math.round(nombreSemaine*4.33*0.95);
+        nombreAnnee = Math.round(nombreMois*12);
+        document.getElementById('okay').style.display = 'block'
+        document.getElementById('okay').innerHTML = 'Poule ajoutée'
+
+        if (couleurOeuf == 'Beige') {
+          cout = nombreAnnee*1;
+        }
+
+        if (couleurOeuf == 'Bleu') {
+          cout = nombreAnnee*1.2;
+        }
+
+        if (couleurOeuf == 'Vert') {
+          cout = nombreAnnee*1.3;
+        }
+
+        if (couleurOeuf == 'Brun') {
+          cout = nombreAnnee*2;
+        }
+
+        if (couleurOeuf == 'Blanc') {
+          cout = nombreAnnee*1.6;
+        }
+
+        coutTota += cout;
+
+        poules.push(
+          {
+            race:race1,
+            name:nom,
+            couleurPoule:couleur1,
+            couleurOeuf:couleurOeuf,
+            jour:jourSemaine,
+            nombreJour:nombreJour,
+            nombreSemaine:nombreSemaine,
+            nombreMois:nombreMois,
+            nombreAnnee:nombreAnnee,
+            cout:Math.round(cout)
+          }
+        );
+      }
+      console.log(poules);
+    }
+  }
+
+  function aff() {
+
+    document.getElementById('div1').style.display='none';
+    document.getElementById('div2').style.display='block';
+    document.getElementById('okay').style.display = 'none'
+
+    var text = '<tr>';
+        text += '<td>Race</td>';
+        text += '<td>Nom</td>';
+        text += '<td>Couleur Poule</td>';
+        text += '<td>Couleur Oeuf</td>';
+        text += '<td>Jour Semaine</td>';
+        text += '<td>Nombre/Jour</td>';
+        text += '<td>Nombre/Semaine</td>';
+        text += '<td>Nombre/Mois</td>';
+        text += '<td>Nombre/Annee</td>';
+        text += '<td>Bénéfices annuel</td>';
+        text += '</tr>';
+
+        poules.sort(classerSelonPonte)
+    
+    for (res of poules) {
+
+        text += '<tr>';
+        text += '<td>'+res.race+'</td>';
+        text += '<td>'+res.name+'</td>';
+        text += '<td>'+res.couleurPoule+'</td>';
+        text += '<td>'+res.couleurOeuf+'</td>';
+        text += '<td>'+res.jour+'</td>';
+        text += '<td>'+res.nombreJour+'</td>';
+        text += '<td>'+res.nombreSemaine+'</td>';
+        text += '<td>'+res.nombreMois+'</td>';
+        text += '<td>'+res.nombreAnnee+'</td>';
+        text += '<td>'+res.cout+' €'+'</td>';
+        text += '</tr>';
+    }
+
+    document.getElementById('tablePoule').innerHTML=text;
+    document.getElementById('div3').innerHTML=Math.round(coutTota)+' € Annuel';
+  }
+
+  function classerSelonPonte(a,b) {
+    return a.nombreJour < b.nombreJour;
+  }
+
+  function del() {
+    poules = [];
+    coutTota = 0;
+    document.getElementById('tablePoule').innerHTML= '';
+    document.getElementById('div3').innerHTML=Math.round(coutTota)+' €';
+  }
+
+</script>
+</html>

@@ -1,0 +1,63 @@
+
+
+body {
+  margin: 0;
+}
+/* Ajouter des background et des images dans la css */
+
+.box {
+  height: 100vh;
+  background-color: red;
+
+  background-image: url(../images/licorne.jpg);
+  /* bgi: ajouter une image en arrière plan du div */
+  background-repeat: no-repeat; /* bgr: controle la répétition de l'image (no-repeat, repeat, repeat-x repeat-y */
+  background-position: 50% 50%; /* positition de l'image dans la boite, on contrôle 2 mesures horizontal et vertical, on peut utiliser des % px vh vw em rem...
+  on peut aussi dire center center: (left, right, bottom, top) */
+
+  /* bgz: controle la taille de l'image d'arrière-plan */
+  background-size: 100% 50%; /* 2 valeurs horizontal et vertical */
+  background-size: 100%; /* identique à 100% auto */
+  background-size: 200px auto; /* on peut utiliser mots-clés comme auto, contain cover */
+
+  background-size: cover; /* couvre toute la zone du bloc */
+  background-size: contain; /* toujours afficher l'image en entier à l'intérieur du bloc en occupant le maximum d'espace */
+
+
+  /* 
+    propriété raccourcie background :
+    couleur  url  répétition positonnement/taille;
+    */
+    background: pink url(../images/licorne.jpg) no-repeat center center/600px auto;
+}
+
+
+.box {
+  /* exemple de double background */
+  background: 
+            linear-gradient(#fff, #ff000030),
+            white url(../images/licorne.jpg) no-repeat center center/600px auto;
+  
+  /* générateur de dégradé css en ligne: https://www.colorzilla.com/gradient-editor/*/
+
+  /* background: radial-gradient(ellipse at center, rgba(132,160,216,1) 20%,rgba(244,105,168,1) 47%,rgba(247,198,108,1) 80%); */
+}
+
+.box {
+  /* BONUS: 
+    mise en forme du texte 
+  */
+
+  text-align: center;
+  padding-top: 10vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 200;
+  font-size: 40px;
+  line-height: 50px;
+  color: #12d2d2;
+  /* text-shadow: 
+  permet d'appliquer une ombre au texte: 
+  text-shadow: déplacementx deplacementy diffusion couleur; */
+  text-shadow: 0 20px 20px #139a9a7f;
+
+}

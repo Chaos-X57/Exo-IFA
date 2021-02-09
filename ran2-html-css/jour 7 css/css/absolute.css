@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+/* Position des élements */
+/* 
+    position: absolute;
+    - Retire l'élément du flux de la page
+    - Se positionne sur un nouveau calque
+    - Le positionnement se fait soit :
+        * par rapport au document html (haut gauche)
+        * par rapport à son parent le plus proche qui a une position différent de static (absolute, relative, fixed...)
+*/
+
+.box {
+  background-color: tomato;
+  color: #fff;
+  padding: 40px;
+  position: absolute;
+  /* par défaut, le point 0 de son système de coordonnées en absolute devient le 0,0 du document html. */
+
+  /* Si l'un de ses parents n'est plus en position: static (absolute, fixed, relative), son système de coordonnées devient le 0,0 de son parent qui a cette propriété (absolute, fixed, relative). */
+  bottom: 0px; 
+  right: 0px;
+  
+}
+
+/* ici le parent est en relative */
+.conteneur {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: lightblue;
+}
+
+/* exemple d'application avec une card 
+-----------------------------------------
+*/
+
+
+.card {
+  width: 320px;
+  margin: 40px auto;
+  background-color: #fff;
+  box-shadow: 0px 20px 40px -10px rgba(0,0,0,.75);
+  border-radius: 10px;
+}
+
+.card .thumb {
+  /* change le systeme de coordonnées du a qui est en position absolute */
+  position: relative;
+}
+
+.card .thumb img {
+  width: 320px;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+
+.card .thumb a {
+  display: inline-block;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ccc;
+  color: tomato;
+  text-transform: uppercase;
+  /* on positionne le lien */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* le point de référence de l'objet ic est son coin haut gauche, donc pour center parfaitement l'élément, on doit décaler son centre en soustrayant la moitié de sa propre dimension : */
+  transform: translate(-50%, -50%);
+}
+
+.card .content {
+  padding: 30px;
+  overflow: hidden;
+}
+
+.card .content h2 {
+  margin: 0;
+}
+
+

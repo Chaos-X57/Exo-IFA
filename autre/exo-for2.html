@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exo for 2</title>
+</head>
+
+<body>
+  
+  <div id="nb"></div>
+
+  <script>
+    var prenom = ['Cédric','Bernard','Joseph','Aurélie','Chloé','Anthony','Denis','Catherine'];
+    var i;
+    var text ='';
+
+    for (i=0; i < prenom.length; i++) {
+
+      console.log(prenom[i]);
+      text += prenom[i]+'<br>';
+    }
+
+    document.getElementById('nb').innerHTML = 'Il y a ' + prenom.length + ' élèves dans la classe, voici les prénoms : <br><br>' + text;
+  </script>
+</body>
+</html>

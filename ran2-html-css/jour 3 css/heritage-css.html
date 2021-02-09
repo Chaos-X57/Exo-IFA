@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'héritage en CSS</title>
+
+  <link rel="stylesheet" href="css/heritage-css.css">
+</head>
+<body>
+  
+    <h1>TagName</h1>
+    <h2 class="center">Centré</h2>
+    <h2>Pas centré</h2>
+    <h2 class="center">Centré</h2>
+    <h2 class="center normal">Centré et en normal</h2>
+    <p class="center">Je veux aussi être centré !</p>
+
+    <h3>Je suis <span id="swag">swag</span></h3>
+
+    <form action="">
+        <input type="text">
+        <input type="email">
+        <input type="submit">
+        <p>Je suis dans le form.</p>
+        <div>
+            <p>autre p</p>
+        </div>
+    </form>
+
+    <ul>
+        <li class="conflit">Test de couleur</li>
+        <li class="conflit" id="hot">Test de couleur</li>
+        <li class="conflit" title="bonjour">Test de couleur</li>
+        <li>Test de couleur</li>
+    </ul>
+
+    <p>Impacté par le sélecteur form ~ p texte en dehors de la balise form.</p>
+    
+    <div class="exemple">
+        <h4>
+            texte dans le 
+            <span>span du titre</span>
+        </h4>
+        <span></span>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+</body>
+</html>

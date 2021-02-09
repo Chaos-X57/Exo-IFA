@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exo Muller Ludovic Dev 2</title>
+</head>
+
+<style>
+
+  html {
+    background-color: rgba(255, 230, 0, 0.308);
+  }
+
+  body {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(200px);
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px red;
+    background-color: white
+  }
+
+  input {
+    box-shadow: 1px 1px 1px black;
+  }
+
+  span {
+    display: none;
+  }
+
+  button {
+    color: white;
+    background-color: red;
+  }
+
+  #div2 {
+    margin-bottom: 10px;
+  }
+</style>
+
+<body>
+  
+  <form action="" method="GET" onclick="charg()">
+    <label for="nom">Nom du produit</label><br>
+    <input type="text" id="nom"> <span id="span1">Saisir un produit</span> <span id="error">Vous devez saisir un nom de produit différent !</span><br><br>
+
+    <label for="quantite">Quantité</label><br>
+    <input type="number" id="quantite"> <span id="span2">Votre quantité</span><br><br>
+
+    <label for="prix">Prix</label><br>
+    <input type="number" id="prix"> <span id="span3">Sera multiplié par votre prix</span>
+    <br>
+    <br>
+    <button type="button" onclick="calc()">Afficher stock</button>
+  </form>
+  <br>
+  <br>
+  <div id="div1"></div>
+  <br>
+  <div id="div2"></div>
+
+  <script>
+    var tab = [];
+    var stock = 0;
+       
+    function calc(){
+
+        var newProduit = document.getElementById('nom').value;
+        var newQuantite = document.getElementById('quantite').value;
+        var newPrix = document.getElementById('prix').value;
+        var text = '';
+
+        tab.push(newProduit);
+        stock = stock + (newQuantite * newPrix);
+        tab.sort();
+    
+        for (i=0; i < tab.length; i++){
+            text+= tab[i]+'<br>'
+
+            if (tab[i+1] == tab[i]) {
+              document.getElementById('error').style.display = 'block';
+              document.getElementById('error').style.color = 'red';
+              document.getElementById('span1').style.display = 'none';
+              console.log('error')
+              tab.pop(newProduit);
+            }
+            else {
+            document.getElementById('error').style.display = 'none';
+            
+            }
+        }
+
+        document.getElementById('div1').innerHTML = 'Les produits en stock sont :<br>'+text;
+        document.getElementById('div2').innerHTML='Le prix total du stock est de : ' +stock+ ' €';
+        document.getElementById('nom').value='';
+        document.getElementById('quantite').value='';
+        document.getElementById('prix').value='';
+        document.getElementById('nom').focus();
+    }
+
+    function charg() {
+
+      var newProduit = document.getElementById('nom').value;
+      var newQuantite = document.getElementById('quantite').value;
+      var newPrix = document.getElementById('prix').value;
+
+      if (newProduit == '' && newQuantite == '' && newPrix == '') {
+          document.getElementById('span1').style.display = 'block';
+          document.getElementById('span1').style.color = 'green';
+          document.getElementById('span2').style.display = 'block';
+          document.getElementById('span2').style.color = 'green';
+          document.getElementById('span3').style.display = 'block';
+          document.getElementById('span3').style.color = 'green';
+      }
+    }
+    
+  </script>
+</body>
+</html>

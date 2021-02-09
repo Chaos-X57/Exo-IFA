@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  background-color: tomato;
+  color: #fff;
+  padding: 40px;
+  position: static; /* valeur par défaut de tous les éléments */
+}

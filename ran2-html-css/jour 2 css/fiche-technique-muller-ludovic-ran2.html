@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande d'intervention technique</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="css/fiche-technique-muller-ludovic-ran2.css">
+</head>
+
+<body>
+
+  <form action="#" method="POST">
+
+    <h1>Demande d'intervention technique</h1>
+
+        <!-- début identité -->
+        <div id="identite" class="identite row">
+          <!-- début col -->
+          <div class="col">
+            <p class="input-form">
+              <label for="agence">Agence de :</label>
+              <input type="text" name="agence" id="agence">
+            </p>
+            <p class="input-form">
+              <label for="email">Email :</label>
+              <input type="email" name="email" id="email">
+            </p>
+          </div>
+          <!-- fin col -->
+
+          <!-- début col -->
+          <div class="col">
+            <p class="input-form">
+              <label for="tel">Téléphone :</label>
+              <input type="tel" name="tel" id="tel">
+            </p>
+            <p class="input-form">
+              <label for="fax">Fax :</label>
+              <input type="tel" name="fax" id="fax">
+            </p>
+          </div>
+          <!-- fin col -->
+        </div>
+        <!-- fin identité -->
+
+    <!-- début demande -->
+    <div id="demande" class="demande row">
+      <h2 class="col-small">Votre demande concerne :</h2>
+      <div class="col-large" id="cadre-gris">
+          <label>
+            <input type="checkbox" name="demande" id="demande-1">
+            Un contrôle de bon fonctionnement (chaudière de moins de 3 mois)
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="demande" id="demande-2">
+            Une mise en service payante
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="demande" id="demande-3">
+            Autre intervention, précisez:
+          </label>
+
+        <input class="input-cadre" type="text" name="demande-precision" id="demande-precision" >
+      </div>
+      <!-- fin .cadre-gris -->
+    </div>
+    <!--  fin demande -->
+
+    <!-- début installateur -->
+    <div id="installateur" class="installateur">
+      <h3><i class="far fa-arrow-alt-circle-right"></i> Installateur</h3>
+      <p class="input-form-wide">
+        <label for="societe">Société :</label>
+        <input type="text" name="societe" id="societe">
+      </p>
+      <p class="input-form-wide">
+        <label for="nom-correspondant">Nom du correspondant :</label>
+        <input type="text" name="nom-correspondant" id="nom-correspondant">
+      </p>
+      <p class="input-form-wide">
+        <label for="adresse">Adresse :</label>
+        <input type="text" name="adresse" id="adresse">
+      </p>
+      <div class="row">
+        <!-- début col -->
+        <p class="col input-form">
+          <label for="cp">Code postal :</label>
+          <input type="text" name="cp" id="cp">
+        </p>
+        <p class="col input-form">
+          <label for="ville">Ville :</label>
+          <input type="text" name="ville" id="ville">
+        </p>
+        <!-- fin col -->
+      </div>
+      <div class="row">
+        <!-- début col -->
+        <p class="col input-form">
+          <label for="tel">Téléphone :</label>
+          <input type="tel" name="tel" id="tel">
+        </p>
+        <p class="col input-form">
+          <label for="portable">Portable :</label>
+          <input type="tel" name="portable" id="portable">
+        </p>
+        <!-- fin col -->
+      </div>
+      <div class="row">
+        <!-- début col -->
+        <p class="col input-form">
+          <label for="email">Email :</label>
+          <input type="email" name="email" id="email">
+        </p>
+        <p class="col input-form">
+          <label for="fax">Fax :</label>
+          <input type="tel" name="fax" id="fax">
+        </p>
+        <!-- fin col -->
+      </div>
+
+    </div>
+    <!-- fin installateur -->
+
+    <!-- début client final -->
+    <div id="client" class="client">
+      <h3><i class="far fa-arrow-alt-circle-right"></i> Client final</h3>
+      <div class="row">
+        <!-- début col -->
+        <p class="col input-form">
+          <label for="nom">Nom :</label>
+          <input type="text" name="nom" id="nom">
+        </p>
+        <p class="col input-form">
+          <label for="prenom">Prénom :</label>
+          <input type="text" name="prenom" id="prenom">
+        </p>
+        <!-- fin col -->
+      </div>
+      <p class="input-form-wide">
+        <label for="adresse">Adresse :</label>
+        <input type="text" name="adresse" id="adresse">
+      </p>
+      <div class="row">
+        <!-- début col -->
+        <p class="col input-form">
+          <label for="cp">Code postal :</label>
+          <input type="text" name="cp" id="cp">
+        </p>
+        <p class="col input-form">
+          <label for="ville">Ville :</label>
+          <input type="text" name="ville" id="ville">
+        </p>
+        <!-- fin col -->
+      </div>
+      <div class="row">
+        <!-- début col -->
+        <p class="col input-form">
+          <label for="tel">Téléphone :</label>
+          <input type="tel" name="tel" id="tel">
+        </p>
+        <p class="col input-form">
+          <label for="portable">Portable :</label>
+          <input type="tel" name="portable" id="portable">
+        </p>
+        <!-- fin col -->
+      </div>
+      <p class="input-form-wide">
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email">
+      </p>
+    </div>
+    <!-- fin client final -->
+
+    <!-- début matériel -->
+    <div id="materiel" class="materiel">
+      <h3><i class="far fa-arrow-alt-circle-right"></i> Matériel</h3>
+      <p class="input-form-wide">Type : 
+        <select name="type" id="type">
+          <option value="1">Selectionner dans la liste...</option>
+          <option value="2">Chaudière type 1</option>
+          <option value="3">Chaudière type 2</option>
+          <option value="4">Chaudière type 3</option>
+          <option value="5">Chaudière type 4</option>
+        </select>
+      </p>
+      <p class="input-form-wide">
+        <label for="date">Date de première mise en route :</label>
+        <input type="text" name="date" id="date">
+      </p>
+      <p class="input-form-checkbox">Problèmes éventuels : 
+        <label>
+        <input type="checkbox" name="oui"> Oui
+        <input type="checkbox" name="non"> Non
+        </label>
+      </p>
+      <p class="input-form-wide">
+        <label for="lesquels">Si oui, lesquels :</label>
+        <input type="text" name="lesquels" id="lesquels">
+      </p>
+    </div>
+    <!-- fin matériel -->
+
+    <!-- début à confirmer -->
+    <div id="à-confirmer" class="à-confirmer">
+      <p class="input-form-à-confirmer">
+        <label for="rendez-vous">Rendez-vous à confirmer :</label>
+        <input type="checkbox" name="rendez-vous" id="rendez-vous"> à l'installateur
+        <input type="checkbox" name="rendez-vous" id="rendez-vous"> au client final
+        <input type="checkbox" name="rendez-vous" id="rendez-vous"> au demandeur
+      </p>
+      <p class="input-form-à-confirmer">
+        <label for="proposition">Proposition d'un contrat d'entretien :</label>
+        <input type="checkbox" name="proposition" id="proposition"> Oui
+        <input type="checkbox" name="proposition" id="proposition"> Non
+      </p>
+      <p class="input-form-à-confirmer">
+        <label for="envoyer">Envoyer par fax ou par mail une copie de la fiche d'intervention :</label>
+        <input type="checkbox" name="envoyer" id="envoyer"> Oui
+        <input type="checkbox" name="envoyer" id="envoyer"> Non
+      </p>
+      <p class="input-form-à-confirmer">
+        <label for="à-qui">Si oui, à qui :</label>
+        <input type="checkbox" name="à-qui" id="à-qui"> à l'installateur
+        <input type="checkbox" name="à-qui" id="à-qui"> au demandeur
+      </p>
+    </div>
+    <!-- fin à confirmer -->
+
+    <div class="dernier">
+        <p>Pour toute intervention payante,</p>
+        <p>une demande de prise en charge vous sera envoyée.</p>  
+        <p>Merci de nous la retrouner dûment complétée par fax ou par mail.</p>
+
+        <label for="commentaire"></label><br>
+          <textarea name="commentaire" id="commentaire" cols="50" rows="10">Commentaire :</textarea>
+          <button type="submit">Envoyer</button>
+    </div>
+
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  text-transform: inherit;
+  font-family: 'Stardos Stencil', cursive;
+  font-size: 25px;
+  background-image: url("https://www.starwars-universe.com/images/interface/v6/background_2.jpg");
+  background-repeat: repeat;
+  margin: 0;
+  margin-bottom: 10%;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  margin-bottom: 5%;
+}
+
+.prems {
+  width: 800px;
+  height: 800px;
+  display: inline-block;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/16/Stargate-color.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.second {
+  width: 800px;
+  height: 800px;
+  display: inline-block;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/16/Stargate-color.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.la-porte {
+  margin-top: 10%;
+}
+
+.la-porte p {
+  color: white;
+}
+
+h1, h2 {
+  font-family: 'Stardos Stencil', cursive;
+  font-style: italic;
+  text-align: center;
+  text-decoration: underline;
+  box-shadow: 10px 10px 10px gold;
+}
+
+h1 {
+  font-size: 120px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  color: white; 
+}
+
+h2 {
+  font-size: 50px;
+  text-transform: capitalize;
+  color: red;
+}
+
+.list {
+  color: red;
+}
+
+img.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.header a:hover {
+  color: white;
+  background-color: red;
+  box-shadow: 10px 10px 10px gold;
+  transition: .5s;
+}
+
+.header a {
+  color: gold;
+}
+
+.qui a:hover {
+  color: white;
+  background-color: red;
+  box-shadow: 10px 10px 10px gold;
+  transition: .5s;
+}
+
+.qui a {
+  color: gold;
+}
+
+.footheader ul {
+  color: gold;
+}
+
+.texte p {
+  color: white;
+}
+
+.table {
+  color: white;
+}
+
+.tr th {
+  color: gold;
+}
+
+.footer a:hover {
+  color: white;
+  background-color: red;
+  box-shadow: 10px 10px 10px gold;
+  transition: .5s;
+}
+
+.footer a {
+  color: gold;
+  text-transform: capitalize;
+}

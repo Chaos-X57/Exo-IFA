@@ -1,0 +1,371 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 56vw;
+  margin: 0 auto;
+  text-align: center;
+  transition: transform 1s;
+}
+
+body:hover {
+  transform: rotate(3turn);
+  background-image: url("../images/star.jpg");
+}
+
+#titre1 {
+  font-size: 2vw;
+}
+
+body:hover #titre1 {
+  visibility: hidden;
+  display: none;
+}
+
+#titre2 {
+  font-size: 2vw;
+  visibility: hidden;
+  display: none;
+}
+
+body:hover #titre2 {
+  visibility: visible;
+  display: inherit;
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(18, 2.4vw);
+  grid-template-rows: repeat(17, 1.6vw);
+  grid-gap: 0.68vw;
+  padding: 0.60vw;
+  width: 56vw;
+  height: 39.3vw;
+  margin: 0 auto;
+  background-color: black;
+}
+
+#x1 {
+  grid-row: 1 / span 3;
+  background-color: rgb(219, 219, 219);
+}
+
+#x2 {
+  grid-row: 4 / span 7;
+  background-color: black;
+}
+
+#x3 {
+  grid-row: 11 / span 6;
+  background-color: rgb(219, 219, 219);
+}
+
+#x4 {
+  grid-column: 1 / span 4;
+  background-color: rgb(219, 219, 219);
+}
+
+#x5 {
+  grid-row-start: 1;
+  grid-column: span 7;
+  background-color: rgb(219, 219, 219);
+}
+#x6 {
+  grid-row: 2 / span 2;
+  grid-column: 2 / span 7;
+  background-color: rgb(021, 005, 112);
+}
+
+#x7 {
+  grid-row: 4 / span 7;
+  grid-column: 2 / span 2;
+  background-color: rgb(219, 219, 219);
+}
+
+#x8 {
+  grid-row: 11 / span 6;
+  grid-column: 2 / span 2;
+  background-color: rgb(199, 005, 003);
+}
+
+#x9 {
+  grid-row: 4 / span 13;
+  background-color: black;
+}
+
+#x10 {
+  grid-row: 4 / span 5;
+  grid-column: 5 / span 3;
+  background-color: rgb(219, 219, 219);
+}
+#x11 {
+ grid-row: 9 / span 2;
+ background-color: rgb(241, 191, 016);
+}
+
+#x12 {
+  grid-row: 11 / span 7;
+  background-color: rgb(241, 191, 016);
+}
+
+#x13 {
+  grid-row: 4 / span 5;
+  background-color: rgb(219, 219, 219);
+}
+
+#x14 {
+  grid-row: 9 / span 2;
+  grid-column: 6 / span 3;
+  background-color: rgb(199, 005, 003);
+}
+
+#x15 {
+  grid-row: 11 / span 5;
+  grid-column: 6 / span 5;
+  background-color: rgb(219, 219, 219);
+}
+
+#x16 {
+  grid-row: 16 / span 2;
+  grid-column: 6 / span 3;
+  background-color: rgb(199, 005, 003);
+}
+
+#x17 {
+  grid-row: 1;
+  grid-column: 9 / span 8;
+  background-color: rgb(219, 219, 219);
+}
+
+#x18 {
+  grid-row: 2 / span 2;
+  grid-column: 9 / span 3;
+  background-color: rgb(219, 219, 219);
+}
+
+#x19 {
+  grid-row: 4 / span 5;
+  grid-column: 9 / span 3;
+  background-color: rgb(241, 191, 016);
+}
+
+#x20 {
+  grid-row: 9 / span 2;
+  grid-column: 9 / span 3;
+  background-color: rgb(021, 005, 112);
+}
+
+#x21 {
+ grid-row: 16 / span 2;
+ grid-column: 9 / span 5;
+ background-color: black;
+}
+
+#x22 {
+ grid-row: 2 / span 2;
+ grid-column: 12 / span 5;
+ background-color: rgb(021, 005, 112);
+}
+
+#x23 {
+  grid-row: 4 / span 5;
+  grid-column: 12 / span 4;
+  background-color: rgb(199, 005, 003);
+}
+
+#x24 {
+  grid-row: 9 / span 2;
+  grid-column: 12 / span 4;
+  background-color: rgb(219, 219, 219);
+}
+
+#x25 {
+  grid-row: 11 / span 5;
+  grid-column: 11 / span 3;
+  background-color: rgb(219, 219, 219);
+}
+
+#x26 {
+  grid-row: 4 / span 5;
+  background-color: rgb(199, 005, 003);
+}
+
+#x27 {
+  grid-row: 9 / span 2;
+  background-color: rgb(219, 219, 219);
+}
+
+#x28 {
+  grid-row: 11 / span 5;
+  grid-column: 14 / span 2;
+  background-color: rgb(021, 005, 112);
+}
+
+#x29 {
+  grid-row: 16 / span 2;
+  grid-column: 14 / span 5;
+  background-color: rgb(219, 219, 219);
+}
+
+#x30 {
+  grid-row: 1 / span 8;
+  background-color: rgb(219, 219, 219);
+}
+
+#x31 {
+  grid-row: 11 / span 5;
+  background-color: rgb(241, 191, 016);
+}
+
+#x32 {
+  grid-row: 9 / span 2;
+  grid-column: 17 / span 2;
+  background-color: black;
+}
+
+#x33 {
+  grid-row: 11 / span 5;
+  grid-column: 17 / span 2;
+  background-color: rgb(219, 219, 219);
+}
+
+#x34 {
+  grid-row: 1 / span 8;
+  background-color: rgb(241, 191, 016);
+}
+
+body:hover #x1 {
+  background-color: black;
+}
+
+body:hover #x3 {
+  background-color: black;
+}
+
+body:hover #x4{
+  background-color: black;
+}
+
+body:hover #x5 {
+  background-color: black;
+}
+
+body:hover #x6 {
+  background-image: url("../images/gifhyper.gif");
+  background-position: center;
+}
+
+body:hover #x7 {
+  background-color: black;
+}
+
+body:hover #x8 {
+  background-color: black;
+}
+
+body:hover #x10 {
+  background-image: url("../images/sabre.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+body:hover #x11 {
+  background-color: black;
+}
+
+body:hover #x12 {
+  background-color: black;
+}
+
+body:hover #x13 {
+  background-color: black;
+}
+
+body:hover #x14 {
+  background-color: black;
+}
+
+body:hover #x15 {
+  background-image: url("../images/bras.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body:hover #x16 {
+  background-color: black;
+}
+
+body:hover #x17 {
+  background-color: black;
+}
+
+body:hover #x18 {
+  background-color: black;
+}
+
+body:hover #x19 {
+  background-image: url("../images/giffight.gif");
+  background-position: center;
+}
+
+body:hover #x20 {
+  background-color: black;
+}
+
+body:hover #x22 {
+  background-image: url("../images/gifsabre.gif");
+  background-position: center;
+}
+
+body:hover #x23 {
+  background-image: url("../images/prise.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body:hover #x24 {
+  background-color: black;
+}
+
+body:hover #x25 {
+  background-image: url("../images/art.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+body:hover #x26 {
+  background-color: black;
+}
+
+body:hover #x27 {
+  background-color: black;
+}
+
+body:hover #x28 {
+  background-color: black;
+}
+
+body:hover #x29 {
+  background-image: url("../images/gifetoile.gif");
+  background-position: center;
+}
+
+body:hover #x30 {
+  background-color: black;
+}
+
+body:hover #x31 {
+  background-color: black;
+}
+
+body:hover #x33 {
+  background-color: black;
+}
+
+body:hover #x34 {
+  background-color: black;
+}

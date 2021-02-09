@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Td Noté Muller Ludovic Dev2</title>
+  <link rel="stylesheet" href="css/td-note.css">
+</head>
+
+<body>
+  <h1>MA VOITURE.FR</h1>
+
+  <form id="form1" action="" method="GET" onblur="voiture()" onclick="voiture()">
+    <label for="marque">Marque <span id="missMarque"></span></label>
+    <br>
+    <input type="text" name="marque" id="marque">
+    <br>
+    <br>
+    <label for="modele">Modèle <span id="missModele"></span></label>
+    <br>
+    <input type="text" name="modele" id="modele">
+    <br>
+    <br>
+    <label for="type">Type <span id="missType"></span></label>
+    <br>
+    <select name="type" id="type">
+      <option value="">Quel type ?</option>
+      <option value="Essence">Essence</option>
+      <option value="Diesel">Diesel</option>
+    </select>
+    <br>
+    <br>
+    <label for="origine">Origine <span id="missOrigine"></span></label>
+    <br>
+    <select name="origine" id="origine">
+      <option value="">Quelle origine ?</option>
+      <option value="France">France</option>
+      <option value="Allemagne">Allemagne</option>
+      <option value="Italie">Italie</option>
+    </select>
+    <br>
+    <br>
+    <label for="km">Nombre de Km <span id="missKm"></span></label>
+    <br>
+    <input type="text" name="km" id="km">
+    <br>
+    <br>
+    <label for="valeur">Valeur neuve <span id="missValeur"></span></label>
+    <br>
+    <input type="text" name="valeur" id="valeur">
+    <br>
+    <br>
+    <label for="travau">Travaux a prévoir <span id="missTravau"></span></label>
+    <br>
+    <select name="travau" id="travau">
+      <option value="">Travaux ?</option>
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+    <br>
+    <br>
+    <input type="button" name="button" id="button" value="Estimer" onclick="calcul()"> <span id="missButton"></span>
+    <br>
+    <br>
+  </form>
+
+  <div id="div1">
+    <label for="marque2">Marque <span id="missMarque2"></span></label><br>
+    <label for="modele2">Modèle <span id="missModele2"></span></label><br>
+    <label for="type2">Type <span id="missType2"></span></label><br>
+    <label for="origine2">Origine <span id="missOrigine2"></span></label><br>
+    <label for="km2">Nombre de Km <span id="missKm2"></span></label><br>
+    <label for="travau2">Travaux à prévoir <span id="missTravau2"></span></label><br>
+    <br>
+    <label for="estime">Prix estimé : <span id="missEstime"></span></label><br>
+  </div>
+
+  <script src="js/td-note.js"></script>
+</body>
+</html>

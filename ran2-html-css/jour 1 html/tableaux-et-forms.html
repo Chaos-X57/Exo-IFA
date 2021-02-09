@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableaux et formulaires</title>
+</head>
+
+<body>
+  <h1>Tableaux et formulaires</h1>
+
+  <h2>Tableaux</h2>
+  <!-- Les tableaux sont aujourd'hui utilisés uniquement pour présenter des données tabulées -->
+
+  <table>
+    <tr>
+      <td>Cellule 1</td>
+      <td>Cellule 2</td>
+    </tr>
+  </table>
+
+  <br>
+  <!-- exemple avec balises supplémentaires -->
+
+  <table border="1px solid black" width="100%">
+    <caption>Titre du tableau</caption>
+    <thead>
+      <tr>
+        <th>Légende de colonne</th>
+        <th>Légende de colonne 2</th>
+        <th>Légende de colonne 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Légende de ligne</th>
+        <td>Cellule de tableau 1 ligne 1</td>
+        <td>Cellule de tableau 2 ligne 1</td>
+      </tr>
+      <tr>
+        <th>Légende de ligne</th>
+        <td>Cellule de tableau 1 ligne 2</td>
+        <td>Cellule de tableau 2 ligne 2</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Légende de colonne</th>
+        <th>Légende de colonne 2</th>
+        <th>Légende de colonne 3</th>
+      </tr>
+    </tfoot>
+  </table>
+
+  <br>
+  <!-- exemple complexe avec fusion des cellules -->
+
+  <table border="1px solid black" width="100%">
+    <tr>
+      <td>Exemple</td>
+      <td>Cellule de tableau</td>
+      <td colspan="3">Cellule fusionnée</td>
+      <!--colspan fusionne avec la/les cellules à droite -->
+    </tr>
+    <tr>
+      <td rowspan="2">Exemple 2</td>
+      <!--rowspan fusionne avec la/les lignes en dessous-->
+      <td colspan="2">Cellule de tableau</td>
+      <td colspan="2">Cellule de tableau</td>
+    </tr>
+    <tr>
+
+      <td><a href="https://www.washaweb.com">Cellule de tableau</a></td>
+      <td>Cellule de tableau</td>
+      <td>Cellule de tableau</td>
+      <td>Cellule de tableau</td>
+    </tr>
+  </table>
+
+
+  <hr> <!-- trait de séparation -->
+
+  <h2>Formulaires</h2>
+
+  <p>
+    Voir le cours en ligne : <a target="_blank"
+      href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML">Les
+      formulaires sur MDN</a>
+  </p>
+  
+  <p>
+    Voir le site: <a target="_blank" href="https://htmlreference.io/">htmlreference.io</a>
+  </p>
+
+
+  <p>les formulaires sont utilisés pour permettre à l'utilisateur de saisir des informations.</p>
+
+  <!-- Attributs obligatoires d'une balise form: action="" method="GET"
+    action -> c'est la page qui va recevoir les données du formulaire
+    methode: GET/POST 
+    GET-> les données sont envoyées dans l'url
+    POST-> les données sont cachées dans le header de la requête
+
+  -->
+  <form action="contact.php" method="GET">
+    <!-- les champs de formulaires sont isolés dans la balise form parente -->
+    <!-- pour capturer une donnée d'un champ input, il doit avoir un name="" (unique) -->
+    <input name="email" type="text" value="">
+    <!-- un formulaire doit pouvoir être envoyé, donc il doit avoir un submit -->
+    <button type="submit">Envoyer</button>
+    <!-- pareil que : <input type="submit" name="envoyer"> -->
+    <button type="reset">Effacer</button>
+  </form>
+
+  <br>
+  <hr> <!-- trait de séparation -->
+  <br>
+
+  <!-- tous les types de champs d'un formulaire -->
+  <form action="#" method="POST">
+    <!-- ce deuxième formulaire n'enregistrera pas les informations du premier formulaire -->
+
+    <!-- select -->
+    <select name="titre" id="titre">
+      <option value="1">M</option>
+      <option value="2">Mme</option>
+      <option value="3">Dr</option>
+      <option value="4">Sr</option>
+      <option value="5">Melle</option>
+    </select>
+
+    <!-- inputs -->
+    <div>
+      <label for="prenom">Prénom</label><br>
+      <input type="text" name="prenom" id="prenom" value="Jerome" min="2" />
+    </div>
+
+    <div>
+      <label for="email">Email</label><br>
+      <input type="email" name="email" id="email" required />
+    </div>
+
+    <div>
+      <label for="telephone">Téléphone</label><br>
+      <input type="tel" name="telephone" id="telephone" />
+    </div>
+
+    <div>
+      <label for="numero_rue">N°</label><br>
+      <input type="number" name="numero_rue" id="numero_rue" />
+    </div>
+
+
+    <!-- textarea pour les zone de saisie de plusieurs lignes -->
+    <div>
+      <label for="adresse">Adresse:</label><br>
+      <textarea name="adresse" id="adresse" cols="30" rows="10">texte par défaut</textarea>
+    </div>
+
+    <!-- cases à cocher: un / plusieurs options -->
+    <br>
+
+    <div>
+      <label>
+        <input type="checkbox" name="newsletter">
+        Inscription Newsletter ?
+      </label>
+    </div>
+
+    <br>
+
+    <div>
+      <label>
+        <input type="radio" name="genre">
+        Masculin
+      </label>
+      <label>
+        <input type="radio" name="genre">
+        Féminin
+      </label>
+      <label>
+        <input type="radio" name="genre">
+        Autre
+      </label>
+    </div>
+
+    <br>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+</body>
+
+</html>

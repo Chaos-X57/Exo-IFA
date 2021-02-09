@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="css/td1.css">
+  <title>Td 1</title>
+</head>
+
+<body>
+  
+  <h1>Inscription</h1>
+  
+  <form action="" method="GET">
+    <label for="nom">Nom</label>
+    <br>
+    <div id="missNom"></div>
+    <i class="far fa-user"></i><input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+    <br>
+    <br>
+    <hr>
+    <label for="prenom">Prénom</label>
+    <br>
+    <div id="missPrenom"></div>
+    <i class="far fa-user"></i><input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required>
+    <br>
+    <br>
+    <hr>
+    <label for="date">Date de naissance</label>
+    <br>
+    <div id="missDate"></div>
+    <i class="far fa-user"></i><input type="text" name="date" id="date" placeholder="Votre date de naissance" required>
+    <br>
+    <br>
+    <hr>
+    <label for="lieu">Lieu de naissance</label>
+    <br>
+    <div id="missLieu"></div>
+    <i class="far fa-user"></i><input type="text" name="lieu" id="lieu" placeholder="Votre lieu de naissance" required>
+    <br>
+    <br>
+    <hr>
+    <label for="signe">Signe astrologique</label>
+    <br>
+    <div id="missSigne"></div>
+    <i class="far fa-user"></i><input type="text" name="signe" id="signe" placeholder="Votre signe astrologique" required>
+    <br>
+    <br>
+    <hr>
+    <label for="mail">Email</label>
+    <br>
+    <div id="missMail"></div>
+    <i class="far fa-user"></i><input type="text" name="mail" id="mail" placeholder="Votre adresse email" required>
+    <br>
+    <br>
+    <hr>
+    <label for="pwd1">Mot de passe</label>
+    <br>
+    <div id="missPwd1"></div>
+    <i class="fas fa-lock"></i><input type="text" name="pwd1" id="pwd1" placeholder="Votre mot de passe" required>
+    <br>
+    <br>
+    <hr>
+    <label for="pwd2">Mot de passe</label>
+    <br>
+    <div id="missPwd2"></div>
+    <i class="fas fa-lock"></i><input type="text" name="pwd2" id="pwd2" placeholder="Votre mot de passe" required>
+    <br>
+    <br>
+    <hr>
+    <label for="area">Présentation en quelques mots</label>
+    <br>
+    <div id="missArea"></div>
+    <textarea name="area" id="area" cols="30" rows="10" required onkeyup="nbrCara('area','nbrcara');" onkeydown="nbrCara('area','nbrcara');" onmouseout="nbrCara('area','nbrcara');"></textarea>
+    <br>
+    <br>
+    <hr>
+    <div id="nbrcara"></div>
+    <br>
+    <br>
+    <input id="bouton_envoi" type="submit" value="INSCRIPTION"></input>
+    <br>
+    <br>
+  </form>
+
+  <script>
+    var formValid = document.getElementById('bouton_envoi');
+    var prenom = document.getElementById('prenom');
+    var missPrenom = document.getElementById('missPrenom');
+    var nom = document.getElementById('nom');
+    var missNom = document.getElementById('missNom');
+    var date = document.getElementById('date');
+    var missDate = document.getElementById('missDate');
+    var lieu = document.getElementById('lieu');
+    var missLieu = document.getElementById('missLieu');
+    var signe = document.getElementById('signe');
+    var missSigne = document.getElementById('missSigne');
+    var mail = document.getElementById('mail');
+    var missMail = document.getElementById('missMail');
+    var pwd1 = document.getElementById('pwd1');
+    var missPwd1 = document.getElementById('missPwd1');
+    var pwd2 = document.getElementById('pwd2');
+    var missPwd2 = document.getElementById('missPwd2');
+    var area = document.getElementById('area');
+    var missArea = document.getElementById('missArea');
+    var nomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+    var prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+    var dateValid = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+    var lieuValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+    var signeValid = /^(Bélier)|(Taureau)|(Gémeaux)|(Cancer)|(Lion)|(Vierge)|(Balance)|(Scorpion)|(Sagitaire)|(Capricorne)|(Verseau)|(Poissons)/;
+    var mailValid = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var pwd1Valid = /^[0-9]{6}/;
+    var pwd2Valid = /^[0-9]{6}/;
+    var areaValid = /^[A-Za-z0-9.]{10,15}$/;
+    
+    formValid.addEventListener('click', validation);
+    
+    function validation(event){
+        //Si le champ est vide
+        if (nom.validity.valueMissing){
+            event.preventDefault();
+            missNom.textContent = 'Saisir votre nom';
+            missNom.style.color = 'red';
+        }else if (nomValid.test(nom.value) == false){
+                    event.preventDefault();
+                    missNom.textContent = 'Format incorrect';
+                    missNom.style.color = 'orange';
+        }else{ 
+        }
+
+        if (prenom.validity.valueMissing){
+            event.preventDefault();
+            missPrenom.textContent = 'Saisir votre prènom';
+            missPrenom.style.color = 'red';
+        }else if (prenomValid.test(prenom.value) == false){
+                    event.preventDefault();
+                    missPrenom.textContent = 'Format incorrect';
+                    missPrenom.style.color = 'orange';
+        }else{ 
+        }
+
+        if (date.validity.valueMissing){
+            event.preventDefault();
+            missDate.textContent = 'Saisir votre date de naissance';
+            missDate.style.color = 'red';
+        }else if (dateValid.test(date.value) == false){
+                    event.preventDefault();
+                    missDate.textContent = 'La date doit être au format dd-mm-yyyy';
+                    missDate.style.color = 'orange';
+        }else{ 
+        }
+
+        if (lieu.validity.valueMissing){
+            event.preventDefault();
+            missLieu.textContent = 'Saisir votre lieu de naissance';
+            missLieu.style.color = 'red';
+        }else if (lieuValid.test(lieu.value) == false){
+                    event.preventDefault();
+                    missLieu.textContent = 'Format incorrect';
+                    missLieu.style.color = 'orange';
+        }else{ 
+        }
+
+        if (signe.validity.valueMissing){
+            event.preventDefault();
+            missSigne.textContent = 'Saisir votre signe astrologique';
+            missSigne.style.color = 'red';
+        }else if (signeValid.test(signe.value) == false){
+                    event.preventDefault();
+                    missSigne.textContent = 'Saisir: Bélier-Taureau-Gémeaux-Cancer-Lion-Vierge-Balance-Scorpion-Sagitaire-Capricorne-Verseau-Poissons';
+                    missSigne.style.color = 'orange';
+        }else{ 
+        }
+
+        if (mail.validity.valueMissing){
+            event.preventDefault();
+            missMail.textContent = 'Saisir votre Email';
+            missMail.style.color = 'red';
+        }else if (mailValid.test(mail.value) == false){
+                    event.preventDefault();
+                    missMail.textContent = 'Saisir votre mail avec @ et .';
+                    missMail.style.color = 'orange';
+        }else{ 
+        }
+
+        if (pwd1.validity.valueMissing){
+            event.preventDefault();
+            missPwd1.textContent = 'Saisir votre mot de passe';
+            missPwd1.style.color = 'red';
+        }else if (pwd1Valid.test(pwd1.value) == false){
+                    event.preventDefault();
+                    missPwd1.textContent = 'Saisir mot de passe à 6 chiffres mini';
+                    missPwd1.style.color = 'orange';
+        }else{ 
+        }
+
+        if (pwd2.validity.valueMissing){
+            event.preventDefault();
+            missPwd2.textContent = 'Confirmer mot de passe';
+            missPwd2.style.color = 'red';
+        }else if (pwd2Valid.test(pwd2.value) == false){
+                    event.preventDefault();
+                    missPwd2.textContent = 'Saisir mot de passe à 6 chiffres mini';
+                    missPwd2.style.color = 'orange';
+        }else{
+        }
+
+        if (area.validity.valueMissing){
+            event.preventDefault();
+            missArea.textContent = 'Saisir une présentation';
+            missArea.style.color = 'red';
+        }else if (areaValid.test(area.value) == false){
+                    event.preventDefault();
+                    missArea.textContent = 'Entre 10 et 15 caractères max';
+                    missArea.style.color = 'orange';
+        }else{ 
+        }
+
+        //corespondance mot de passe
+        var a = document.getElementById("pwd2").value;
+        var b = document.getElementById("pwd1").value;
+
+        if (a!=b) {
+            missPwd2.textContent = 'Le mot de pas ne correspond pas';
+            missPwd2.style.color = 'red';
+        return false; }
+        else {
+            missPwd2.textContent = 'Le mot de passe correspond';
+            missPwd2.style.color = 'green';
+        return false; }
+    }
+
+    //nombre caractères
+    function nbrCara(cara,nbrcara) {
+        var nombre = document.getElementById(cara).value.length;
+        document.getElementById(nbrcara).innerHTML = nombre + ' ' + 'caractères';
+        document.getElementById(nbrcara).style.display='block';
+    }
+  </script>
+</body>
+</html>

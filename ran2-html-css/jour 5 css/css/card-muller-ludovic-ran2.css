@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.box1 {
+  width: 50%;
+  height: 50%;
+  margin:  auto;
+  margin-top: 10%;
+  display: block;
+  padding: 10% 10% 20% 10%;
+  background-image: url("https://www.numerama.com/content/uploads/2015/10/darkvador.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: 10px 0px 10px red;
+}
+
+.box2 {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  margin-bottom: 10%;
+  display: block;
+  padding: 1% 10% 10% 5%;
+  text-transform: capitalize;
+  box-shadow: 10px 10px 10px red;
+  background-color: rgba(255, 0, 0, 0.150);
+}
+
+.text1 {
+  display: inline-block;
+  color: red;
+  box-shadow: 10px 5px 5px red;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 0;
+  transform: translate(10px, 200px);
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: white;
+  border: white;
+  
+}
+
+.text1:hover {
+  background-color: red;
+  box-shadow: 10px 10px 10px white;
+}
+
+.un {
+  opacity: 1;
+}
+
+.deux {
+  display: none;
+}
+
+.text1:hover span.un {
+  opacity: 0;
+}
+
+.text1:hover span.deux {
+  display: inherit;
+  position: absolute;
+  text-align: center;
+  transform: translate(-120px, -22px);
+  color: white;
+}
+
+h1, h2, p {
+  margin-bottom: 0;
+}
+
+.text2 {
+  display: block;
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+.text3 {
+  display: block;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.text4 {
+  display: block;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.text5 {
+  display: block;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.text6 {
+  display: block;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.cercle1 { 
+  float: left;
+  height: 100px; 
+  width: 100px; 
+  background-color: blue;
+  border: 5px solid rgba(0, 0, 0, 1);
+  border-radius: 50%; 
+}
+
+.cercle2 { 
+  float: left;
+  height: 100px; 
+  width: 100px;
+  margin-left: 5%;
+  background-color: red;
+  border: 5px solid rgba(0, 0, 0, 1);
+  border-radius: 50%; 
+}
+
+.cercle3 { 
+  float: left;
+  height: 100px; 
+  width: 100px;
+  margin-left: 5%;
+  background-color :white;
+  border: 5px solid rgba(0, 0, 0, 1);
+  border-radius: 50%; 
+}
+
+.cercle4 { 
+  float: left;
+  height: 100px; 
+  width: 100px;
+  margin-left: 5%;
+  background-color: green;
+  border: 5px solid rgba(0, 0, 0, 1);
+  border-radius: 50%; 
+}

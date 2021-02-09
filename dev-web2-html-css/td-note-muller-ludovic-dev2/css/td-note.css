@@ -1,0 +1,48 @@
+html {
+  background-color: rgb(211, 205, 205);
+}
+
+body {
+  width: 500px;
+  transform: translate(0, 100px);
+  text-align: center;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  box-shadow: 1px 1px 1px black;
+}
+
+select {
+  box-shadow: 1px 1px 1px black;
+}
+
+#div1 {
+  display: none;
+}
+
+span {
+  color: red;
+}
+
+#button {
+  display: none;
+  width: 200px;
+  height: 30px;
+  margin-left: 150px;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+}
+
+#missEstime {
+  font-size: 30px;
+}

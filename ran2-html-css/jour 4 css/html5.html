@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balises HTML5</title>
+  <style>
+
+.lettrine {
+  font-size: 28px;
+  color: red;
+}
+  </style>
+</head>
+<body id="top">
+  <!-- les nouvelles baliser HMTL5 permettent de structurer la page comme des divs, mais avec une sémantique différente -->
+  <header class="main-header">
+    <!-- le contenu de l'entete de page -->
+    <h1>Titre de la page</h1>  <!--un seul h1 par page-->
+
+    <nav>
+      <!-- ici la navigation du site web -->
+      <ul>
+        <li>
+          <a href="#top" class="active">Accueil</a>
+        </li>
+        <li>
+          <a href="#a-propos">A propos</a>
+        </li>
+        <li>
+          <a href="#blog">Blog</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="a-propos">
+      <h2>A propos</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, voluptatibus quis illo cupiditate laborum excepturi ducimus doloribus corrupti assumenda magnam maxime fugiat pariatur, dolorum, a earum aspernatur sit eligendi omnis.</p>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="blog-list">
+        <article>
+          <header>
+            <!-- des métas données de l'article ici -->
+          </header>
+          <!-- un article représente le contenu réel et intéressant de votre site -->
+          <h3>Article 1</h3>
+          <p>contenu extrait de l'article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus consectetur quae asperiores, molestias placeat vel perferendis quaerat aut autem illum molestiae a iste velit adipisci aliquam porro harum maiores!</p>
+          <img src="http://lorempixel.com/300/200/abstract/1" alt="fausse image exemple 1">
+          <footer>
+            <!-- des métas données de l'article ici -->
+            <p>
+              <span class="meta-author">Auteur: Marcel Dupont</span>, 
+              <span class="meta-category">Catégorie: Spectacle</span>, 
+              <span class="meta-tags">Tags: <a href="#moto">#moto</a></span>
+            </p>
+          </footer>
+        </article>
+        <article>
+          <h3>Article 2</h3>
+          <p><span class="lettrine">E</span>xtrait de l'article 1 <strong>texte important</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus consectetur quae asperiores, molestias placeat vel perferendis quaerat aut autem illum molestiae a iste velit adipisci aliquam porro harum maiores!</p>
+          <img src="http://lorempixel.com/300/200/abstract/2" alt="fausse image exemple 2">
+        </article>
+        <article>
+          <h3>Article 3</h3>
+          <p>contenu extrait de l'article 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus consectetur quae asperiores, molestias placeat vel perferendis quaerat aut autem illum molestiae a iste velit adipisci aliquam porro harum maiores!</p>
+          <img src="http://lorempixel.com/300/200/abstract/3" alt="fausse image exemple 3">
+        </article>
+      </div>
+
+      <!-- informations en relation avec le contenu (aside-> info-complémentaire) -->
+      <aside>
+        <h4>Liste des catégorie du blog</h4>
+        <ul>
+          <li>
+            <a href="#">Actualités</a>
+          </li>
+          <li>
+            <a href="#">Spectacles</a>
+          </li>
+          <li>
+            <a href="#">Dossiers</a>
+          </li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+    </section>
+
+    
+    <!-- contenu pricipal de la page: balise unique !!! -->
+  </main>
+
+  <footer class="main-footer">
+    <!-- le contenu du pied de page -->
+    <ul>
+      <li>
+      <a href="#contact">Lien vers contact</a>
+      </li>
+    </ul>
+  </footer>
+
+
+  <!-- En résumé :
+  
+    Les nouvelles balises HTML sont sémantique, elles donnent du sens au contenu qu'elles contiennent.
+    La règle c'est je donne une sémantique à mon contenu à chaque fois que c'est nécessaire.
+    header, footer, main, section, article, aside, nav
+    Dans tous les autres cas, je continue d'utiliser des div, ou des spans pour grouper les balises.
+    
+    <header>
+    </header>
+    <main>
+      <section>
+        
+        ...
+        <article>
+          <h2></h2>
+        </article>
+      </section>
+    </main>
+    <footer>
+      
+    </footer>
+  -->
+
+</body>
+</html>

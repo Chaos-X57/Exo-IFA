@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire d'Intervention Technique</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="css/fiche-technique-corrigee.css">
+</head>
+<body>
+  <form action="#" method="POST">
+
+    <h1 class="entete">Formulaire d'Intervention Technique</h1>
+
+
+    <div id="identite" class="identite row">
+      <div class="col">
+        <p class="input-form">
+          <label for="agence">Agence de :</label>
+          <input type="text" name="agence" id="agence">
+        </p>
+        <p class="input-form">
+          <label for="email">Email :</label>
+          <input type="email" name="email" id="email">
+        </p>
+      </div>
+      <!-- /.col -->
+      <div class="col">
+        <p class="input-form">
+          <label for="tel">Téléphone :</label>
+          <input type="tel" name="tel" id="tel">
+        </p>
+        <p class="input-form">
+          <label for="fax">Fax :</label>
+          <input type="tel" name="fax" id="fax">
+        </p>
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /#identite -->
+
+    <div id="demande" class="demande row">
+      <h2 class="col-small">Votre demande concerne:</h2>
+      <div class="col-large cadre-gris">
+          <label>
+            <input type="checkbox" name="demande" id="demande-1">
+            Un contrôle de bon fonctionnement (chaudière de moins de 3 mois)
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="demande" id="demande-2">
+            Une mise en service payante
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="demande" id="demande-3">
+            Autre intervention, précisez:
+          </label>
+
+        <input class="input-cadre" type="text" name="demande-precision" id="demande-precision" >
+      </div>
+      <!-- /.cadre-gris -->
+    </div>
+    <!-- /#demande -->
+
+    <div id="installateur" class="installateur">
+      <h3><i class="far fa-arrow-alt-circle-right"></i> installateur</h3>
+      <p class="input-form-wide">
+        <label for="societe">Société :</label>
+        <input type="text" name="societe" id="societe">
+      </p>
+      <p class="input-form-wide">
+        <label for="nom-correspondant">Nom du correspondant :</label>
+        <input type="text" name="nom-correspondant" id="nom-correspondant">
+      </p>
+      <p class="input-form-wide">
+        <label for="adresse">Adresse :</label>
+        <input type="text" name="adresse" id="adresse">
+      </p>
+      <div class="row">
+        <p class="col input-form">
+          <label for="cp">Code postal :</label>
+          <input type="text" name="cp" id="cp">
+        </p>
+        <p class="col input-form">
+          <label for="ville">Ville :</label>
+          <input type="text" name="ville" id="ville">
+        </p>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /#installateur -->
+
+    
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+
+
+  
+</body>
+</html>

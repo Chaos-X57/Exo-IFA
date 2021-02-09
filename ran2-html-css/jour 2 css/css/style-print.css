@@ -1,0 +1,10 @@
+/*contenu de css/style-print.css*/
+
+body {
+  background-color: #fff;
+}
+
+p {
+  color: black;
+  font-size: 16px;
+}

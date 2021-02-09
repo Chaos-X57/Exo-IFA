@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/star.jpg");
+}
+
+#menu {
+  width: 50vw;
+  height: 42vw;
+  margin: 50px auto;
+  background-color: #ececec;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+#menu ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+#menu ul li {
+  margin: 8px;
+}
+
+#menu a {
+  padding: 10px;
+  font-size: 1.5vw;
+  text-decoration: none;
+  color: black;
+}
+
+#menu a:hover {
+  color: white;
+}
+
+li:hover a {
+  background-color: red;
+  border-radius: 50%;
+}
+
+#menu h1 {
+  margin-bottom: 30px;
+  font-size: 2vw;
+}
+
+img {
+  width: 50%;
+  margin-bottom: 20px;
+}

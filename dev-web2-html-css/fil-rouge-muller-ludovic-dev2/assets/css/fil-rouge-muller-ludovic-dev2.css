@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  background: #060e1b;
+  overflow: hidden;
+  background-color: #060e1b;
+}
+
+@font-face {
+  font-family: 'Stardos Stencil';
+  src: url("../fonts/StardosStencil-Bold.ttf");
+}
+
+#part1, #part2, .wrap, a div, span {
+  background-size: cover;
+}
+
+h1 {
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  font-size: 3vw;
+  letter-spacing: 0.5vw;
+  text-decoration: underline;
+  font-family: 'Stardos Stencil';
+  text-shadow:
+  #F0FC00 2px 2px 0,
+  #FF6200 4px 4px 0,
+  #CC0808 6px 6px 0.5px,
+  #333 8px 11px 10px;
+  color:#FFFEA5;
+}
+
+#part1 {
+  position: absolute;
+  left: 30%;
+  top: 18%;
+  width: 38vw;
+  height: 38vw;
+  background-image: url("../images/soleil.gif");
+  border-radius: 50%;
+}
+
+#part2 {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 23vw;
+  height: 23vw;
+  background-image: url("../images/hole.gif");
+  border-radius: 50%;
+}
+
+.wrap {
+  position: absolute;
+  top: -48%;
+  left: -48%;
+  width: 45vw;
+  height: 45vw;
+  margin: 0 auto;
+  transform: scale(0.2) translatez(0px);
+  opacity: 0;
+  transition: transform .5s, opacity .5s;
+  border-radius: 100%;
+  background-image: url("../images/cycle.gif");
+}
+
+a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10vw;
+  height: 10vw;
+  overflow: hidden;
+  transform: scale(.5) translateZ(0px);
+  background: black;
+  border: 2px solid white;
+}
+
+a div {
+  height: 10vw;
+  opacity: .1;
+  transition: opacity .5s;
+  border-radius: 100%;
+}
+
+a:nth-child(1) {
+  border-radius: 100%;
+  top: 20%;
+  left: 7%;
+  transform-origin: 110% 110%;
+  transition: transform .4s .15s;
+}
+
+a:nth-child(1) div {
+  background-image: url("../images/rinne.jpg");
+}
+
+a:nth-child(2) {
+  border-radius: 100%;
+  top: 20%;
+  left: 71%;
+  transform-origin: -10% 110%;
+  transition: transform .4s .2s;
+}
+
+a:nth-child(2) div {
+  background-image: url("../images/mars.jpg");
+  background-position: center;
+}
+
+a:nth-child(3) {
+  border-radius: 100%;
+  top: 55%;
+  left: 5%;
+  transform-origin: 110% -10%;
+  transition:transform .4s .25s;
+}
+
+a:nth-child(3) div {
+  background-image: url("../images/wow.jpg");
+  background-position: center;
+}
+
+a:nth-child(4) {
+  border-radius: 100%;
+  top: 55%;
+  left: 72%;
+  transform-origin: -10% -10%;
+  transition: transform .4s .3s;
+}
+
+a:nth-child(4) div {
+  background-image: url("../images/prise.jpg");
+}
+
+a:nth-child(5) {
+  top: 34%;
+  left: 33%;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  transform: scale(1);
+}
+
+a:nth-child(5) div {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/cv.jpg");
+  background-position: center;
+}
+
+a:nth-child(6) {
+  border-radius: 100%;
+  top: 75%;
+  left: 39%;
+  transform-origin: 110% 110%;
+  transition: transform .4s .3s;
+}
+
+a:nth-child(6) div {
+  background-image: url("../images/soleil.gif");
+}
+
+a:nth-child(7) {
+  border-radius: 100%;
+  top: 3%;
+  left: 39%;
+  transform-origin: 110% 110%;
+  transition: transform .4s .3s;
+}
+
+a:nth-child(7) div {
+  background-image: url("../images/explogif.gif");
+}
+
+span {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  top: 40%;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 100%;
+  transform: translateZ(0px);
+  border: 2.5px solid white;
+  background-color: black;
+}
+
+span span {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 60%;
+  height: 5px;
+  background: white;
+  border-radius: 0;
+}
+
+span span:after, span span:before {
+  position: absolute;
+  top: -1.5vmin;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: inherit;
+}
+
+span span:after {
+  top: 1.5vmin;
+}
+
+span:hover + .wrap, .wrap:hover {
+  transform: scale(0.8) translateZ(0px);
+  opacity: 1;
+}
+
+span:hover + .wrap a, .wrap:hover a {
+  transform: scale(1) translatez(0px);
+}
+
+a:hover {
+  box-shadow: 2px 5px 20px white;
+}
+
+a:hover div {
+  opacity: 1;
+  transform: translatez(0px);
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  opacity: 1;
+}

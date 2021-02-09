@@ -1,0 +1,419 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Yeon Sung', cursive;
+  src: url("../fonts/YeonSung-Regular.ttf");
+}
+
+body {
+  font-family: 'Yeon Sung', cursive;
+  margin: 0 auto;
+  background: #060e1b;
+  background-color: #060e1b;
+}
+
+#tit {
+  position: absolute;
+  top: -35%;
+  width: 20vw;
+  font-size: 2.5vw;
+  color: white;
+  text-align: center;
+}
+
+#one {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 20%;
+  border: 1px solid white;
+  background-image: url("../images/land.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#one ul {
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 1.2vw;
+  line-height: 25vw;
+  justify-content: space-around;
+}
+
+#one a {
+  text-decoration: none;
+  border-radius: 10%;
+}
+
+#one1 {
+  padding: 10px;
+  color: orangered;
+  text-shadow: 5px 5px 5px rgb(33, 148, 255);
+  border: 1px solid rgb(0, 132, 255);
+  background-color: rgba(33, 148, 255, 0.70);
+}
+
+#one1:hover {
+  color: white;
+  background-color: rgb(0, 132, 255);
+  box-shadow: 10px 5px 5px rgb(77, 199, 255);
+}
+
+#one2 {
+  padding: 10px;
+  color: orangered;
+  text-shadow: 5px 5px 5px rgb(96, 245, 37);
+  border: 1px solid rgb(23, 167, 23);
+  background-color: rgba(96, 245, 37, 0.70);
+}
+
+#one2:hover {
+  color: white;
+  background-color: rgb(23, 167, 23);
+  box-shadow: 10px 5px 5px rgb(96, 245, 37);
+}
+
+#one3 {
+  padding: 10px;
+  color: orangered;
+  text-shadow: 5px 5px 5px rgb(255, 251, 4);
+  border: 1px solid rgb(212, 184, 24);
+  background-color: rgba(255, 251, 4, 0.70);
+}
+
+#one3:hover {
+  color: white;
+  background-color: rgb(212, 184, 24);
+  box-shadow: 10px 5px 5px rgb(255, 251, 4);
+}
+
+.section1 {
+  display: flex;
+}
+
+/* part1 */
+#titre1 {
+  display: inline-block;
+  text-shadow: 5px 5px 5px black;
+}
+
+#titre2 {
+  display: inline;
+  text-shadow: 5px 5px 5px black;
+}
+
+#titre1:hover , #titre2:hover {
+  color: white;
+  background-color: rgb(0, 132, 255);
+  box-shadow: 10px 5px 5px rgb(77, 199, 255);
+  cursor: default;
+}
+
+.phrase1 {
+  padding: 20px;
+}
+
+.phrase1:hover {
+  text-shadow: 5px 5px 5px rgb(77, 199, 255);
+  cursor: default;
+}
+
+#container1 {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  color: rgb(0, 132, 255);
+}
+
+#head1 {
+  background-image: url("../images/lich1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav1 ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.lien1 {
+  display: block;
+  justify-content: center;
+  color: white;
+  text-shadow: 5px 5px 5px rgb(33, 148, 255);
+  border: 1px solid rgb(0, 132, 255);
+  text-decoration: none;
+  min-width: 100%;
+  padding-left: 168.5px;
+  padding-right: 168.5px;
+}
+
+.lien1:hover {
+  color: white;
+  background-color: rgb(0, 132, 255);
+  box-shadow: 10px 5px 5px rgb(77, 199, 255);
+}
+
+#aside1 {
+  padding-right: 300px;
+  padding-bottom: 500px;
+  order: -1;
+  background-image: url("../images/lichegif1.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+}
+
+#aside2 {
+  padding-left: 300px;
+  background-image: url("../images/lichegif2.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 35%;
+}
+
+#footer1 {
+  width: 100%;
+  padding-bottom: 150px;
+  background-image: url("../images/liche2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 30%;
+}
+
+iframe {
+  margin-top: 35px;
+}
+
+/* part2 */
+#titre3 {
+  display: inline-block;
+  text-shadow: 5px 5px 5px black;
+}
+
+#titre4 {
+  display: inline;
+  text-shadow: 5px 5px 5px black;
+}
+
+#titre3:hover , #titre4:hover {
+  color: white;
+  background-color: rgb(23, 167, 23);
+  box-shadow: 10px 5px 5px rgb(96, 245, 37);
+  cursor: default;
+}
+
+.phrase2 {
+  padding: 20px;
+}
+
+.phrase2:hover {
+  text-shadow: 5px 5px 5px rgb(96, 245, 37);
+  cursor: default;
+}
+
+#container2 {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  color: rgb(23, 167, 23);
+}
+
+#head2 {
+  background-image: url("../images/ysera1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: 35%;
+}
+
+.nav2 ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.lien2 {
+  display: block;
+  justify-content: center;
+  color: white;
+  text-shadow: 5px 5px 5px rgb(96, 245, 37);
+  border: 1px solid rgb(23, 167, 23);
+  text-decoration: none;
+  min-width: 100%;
+  padding-left: 168.5px;
+  padding-right: 168.5px;
+}
+
+.lien2:hover {
+  color: white;
+  background-color: rgb(23, 167, 23);
+  box-shadow: 10px 5px 5px rgb(96, 245, 37);
+}
+
+#aside3 {
+  padding-right: 300px;
+  padding-bottom: 500px;
+  order: -1;
+  background-image: url("../images/yseragif1.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+}
+
+#aside4 {
+  padding-left: 300px;
+  background-image: url("../images/yseragif2.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 25%;
+}
+
+#footer2 {
+  width: 100%;
+  padding-bottom: 150px;
+  background-image: url("../images/ysera2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 15%;
+}
+
+/* part3 */
+#titre5 {
+  display: inline-block;
+  text-shadow: 5px 5px 5px black;
+}
+
+#titre6 {
+  display: inline;
+  text-shadow: 5px 5px 5px black;
+}
+
+#titre5:hover , #titre6:hover {
+  color: white;
+  background-color: rgb(212, 184, 24);
+  box-shadow: 10px 5px 5px rgb(255, 251, 4);
+  cursor: default;
+}
+
+.phrase3 {
+  padding: 20px;
+}
+
+.phrase3:hover {
+  text-shadow: 5px 5px 5px rgb(255, 251, 4);
+  cursor: default;
+}
+
+#container3 {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  color: rgb(212, 184, 24);
+}
+
+#head3 {
+  background-image: url("../images/anduin1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 20%;
+}
+
+.nav3 ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.lien3 {
+  display: block;
+  justify-content: center;
+  color: white;
+  text-shadow: 5px 5px 5px rgb(255, 251, 4);
+  border: 1px solid rgb(212, 184, 24);
+  text-decoration: none;
+  min-width: 100%;
+  padding-left: 168.5px;
+  padding-right: 168.5px;
+}
+
+.lien3:hover {
+  color: white;
+  background-color: rgb(212, 184, 24);
+  box-shadow: 10px 5px 5px rgb(255, 251, 4);
+}
+
+#aside5 {
+  padding-right: 300px;
+  padding-bottom: 500px;
+  order: -1;
+  background-image: url("../images/anduingif1.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+}
+
+#aside6 {
+  padding-left: 300px;
+  background-image: url("../images/anduingif2.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+}
+
+#footer3 {
+  width: 100%;
+  padding-bottom: 150px;
+  background-image: url("../images/anduin2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 30%;
+}
+
+#ifra {
+  margin-top: 20%;
+}
+
+canvas {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  opacity: 1;
+}

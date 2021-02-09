@@ -1,0 +1,72 @@
+/* Mise en page en colonnes
+---------------------------------------- */
+body {
+  margin: 0;
+}
+
+article {
+  background-color: #fabeb4;
+  padding: 5px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+
+  margin-bottom: 20px;
+}
+
+article img {
+  height: 180px;
+}
+
+/* Le flex permet une mise en page complexe */
+
+.conteneur {
+  padding: 10px;
+  display: flex; /* utilise le compositeur flex -> mise en page en flex */
+  
+  /* on utilise la direction en colonnes -> l'axe principal est donc vertical */
+  flex-direction: column;
+  height: 1000px;
+  border: 2px solid red;
+}
+
+.conteneur article {
+  display: flex;
+  width: 600px;
+}
+.conteneur article img {
+  margin-right: 20px;
+}
+.conteneur article h2 {
+  margin-top: 0;
+}
+
+/* 3 exemples d'alignement (on règle l'alignement global sur le conteneur, pas sur l'article) */
+
+.conteneur-1 {
+  justify-content: center;
+  align-items: center;
+}
+
+.conteneur-2 {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.conteneur-3 {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* on peut faire des exeptions sur un item en particulier, on peut aussi régler l'ordre */
+.conteneur-3 article {
+  order: 3;
+}
+.conteneur-3 article:first-child {
+  background-color: red;
+  align-self: flex-start;
+  order: 2;
+}
+
+.conteneur-3 article:last-child {
+  order: 1;
+}

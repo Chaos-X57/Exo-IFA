@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les balises HTML</title>
+</head>
+
+<body>
+    <!-- Structure d'une balise ouvrante/fermante :
+        <balise attribut="valeur">
+            contenu de la balise
+        </balise>
+        Quelques exemples :
+        <h1 title="Titre qui apparait au survol de la souris">
+          Texte du titre
+        </h1>
+        <a href="http://www.google.com" title="Exemple de titre">Lien vers google</a>
+
+        <baliseautofermante />
+        Quelques exemples :
+        <img />
+        <img />
+        <input type="text" />
+    -->
+
+    <!-- Balises de titre (type block)-->
+
+    <!-- https://docs.emmet.io/ -->
+    <!-- h$*6{Titre $} -->
+    <h1>Titre 1</h1>
+    <h2>Titre 2</h2>
+    <h3>Titre 3</h3>
+    <h4>Titre 4</h4>
+    <h5>Titre 5</h5>
+    <h6 id="titre6">Titre 6</h6>
+
+    <!-- Balises de texte p:(type block) -->
+
+    <p>Texte du paragraphe<br />
+        <!-- <br />  'break' -> retour à la ligne dans un paragraphe -->
+        Nouvelle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ligne de paragraphe
+        <!-- &nbsp; -> encodage du caractère espace ' ' -->
+    </p>
+    <p>
+        Nouveau paragraphe de texte
+    </p>
+    <p>
+        <!-- balise de type inline(em, strong, i, u, b, sup, sub, span, a,....) -->
+        Lorem ipsum <strong>texte bold</strong> consectetur adipisicing elit. Qui, delectus doloremque temporibus
+        perferendis <em>texte italic</em> impedit. <u>Amet explicabo</u> provident <b>nemo mollitia</b> exercitationem!
+        <i>Voluptates</i> facilis <strike>ipsa nesciunt</strike> veniam quisquam asperiores molestiae.<br>
+        25 M<sup>2</sup><br>
+        H<sub>2</sub>O
+    </p>
+
+    <!-- balises de citation -->
+    <blockquote>Auteur:
+        <cite>exemple de citation</cite>
+    </blockquote>
+
+
+    <!-- les balises de listes -->
+
+    <!-- listes non-ordonnées (unordored-list->list-item) -->
+    <ul>
+        <li>Element de ma liste 1</li>
+        <li>Element de ma liste 2</li>
+        <li>Element de ma liste 3</li>
+        <li>Element de ma liste 4</li>
+        <li>Element de ma liste 5</li>
+    </ul>
+
+    <!-- liste ordonnées (ordored-list) -->
+    <ol>
+        <li>Faire les courses</li>
+        <li>Regarder le Mandalorien</li>
+        <li>Nettoyer la vaisselle</li>
+        <li>Aller au lit</li>
+    </ol>
+
+    <!-- les listes de définitions (definition-list) -->
+    <dl>
+
+        <!-- un groupe de titre défintion -->
+        <dt>Titre de la définition</dt>
+        <dd>Definition description</dd>
+        <!-- ./fin du groupe -->
+
+        <dt>Sémantique:</dt>
+        <dd><em>Definition de la sémantique:</em> Relatif au sens, à la signification des unités linguistiques.</dd>
+    </dl>
+
+    <!-- Exemple de listes imbriquées -->
+    <ul>
+        <li>Texte ici</li>
+        <li>Autre ligne</li>
+        <li>
+            Ligne du menu
+            <h3>Titre ici</h3>
+            <ol>
+                <li>
+                    <p>erreur html</p>
+                </li>
+                <li>
+                    <a href="#">Exemple de lien du menu</a>
+                </li>
+            </ol>
+        </li>
+    </ul>
+
+    <!-- Les balises de lien -->
+    <!-- a*11{Lien vers} -->
+
+    <!-- lien vers une url absolue -->
+    <a href="https://www.google.fr/" target="_blank">Lien vers un site internet (nom de domaine)</a><br>
+
+    <!-- lien vers des urls relative -->
+    <a href="hello.html">Lien vers la page hello</a><br>
+
+    <!-- lien vers une page dans un dossier relatif au dossier courant -->
+    <a href="pages/page.html">Lien vers la page dans le dossier pages</a><br>
+
+    <!-- lien vers une url absolue du même domaine -> / = racine du domaine, on doit donc préciser toute la liste des sous-dossier depuis la racine pour accéder à la page -->
+    <a href="/Users/jeromeposlednik/Desktop/RAN2-HTML-CSS/Jour-1-HTML/balises.html">Lien vers chemin absolut</a><br>
+
+    <!-- lien vers une image ou un autre document -->
+    <a href="images/astronaut.jpg">Lien vers une image</a><br>
+    <a href="documents/cours.pdf">Lien vers un pdf</a><br>
+    <a href="documents/cours.zip">Lien vers une archive zip</a><br>
+    <!-- ce document zip n'est pas reconnu comme un fichier que le navigateur peut visualiser, il lance donc le téléchargement de ce fichier -->
+
+    <!-- lien vers un mail -->
+    <a href="mailto:contact@washaweb.com">Lien vers un email (ouvre un nouveau message)</a><br>
+    <a
+        href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+        Vers un email, avec les détails du message préremplis
+    </a><br>
+
+    <!-- lien vers une application (ici : skype) -->
+    <a href="skype:whashaweb">Lien vers Skype</a><br>
+
+    <!-- lien vers une ancre nommée (la page doit contenir une balise qui a l'id="titre6") -->
+    <a href="#titre6">Lien vers une ancre</a><br>
+
+
+    <!-- 
+    les balises de séparation/regroupement 
+    servent à attribuer des styles à des groupes de mots/balises
+    elles n'ont aucune valeur sémantique, elles servent au développeur 
+    pour organiser l'information
+  -->
+
+    <div></div><!-- balise de type block utilisée pour regrouper plusieurs balises -->
+    <span></span><!-- balise de type inline utilisée pour regrouper plusieurs mots dans une phrase -->
+
+    <div style="background-color: red; padding: 20px">
+        <p>
+            <span style="color: white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span> Quis amet, sit
+            eaque recusandae porro officia architecto, aliquid, hic id reiciendis velit? Quisquam quidem sequi, eos
+            totam nostrum nesciunt ipsam iure?
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis provident asperiores eaque totam
+            consequatur enim nobis dolor commodi. Blanditiis cum aut iste nisi quisquam enim quasi maxime sed officiis
+            cumque.
+        </p>
+    </div>
+
+</body>
+
+</html>

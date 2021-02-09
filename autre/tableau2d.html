@@ -1,0 +1,70 @@
+<script>
+
+  var somme = 0;
+  // TABLEAU D'OBJET
+  var produits = 
+  [
+      {
+          nom:'carte graphique',
+          qt:10,
+          prixHt:100,
+          prixTtc:200,
+          tva:100,
+          categorie:'materiel',
+          total:1000
+      },
+      {
+          nom:'carte mère',
+          qt:8,
+          prixHt:599,
+          prixTtc:699,
+          tva:100,
+          categorie:'materiel',
+          total:4792
+      }
+  ];
+
+  produits.push(
+      {
+          nom:'mémoire',
+          qt:16,
+          prixHt:59,
+          prixTtc:99,
+          tva:10,
+          categorie:'materiel',
+          total:944
+      }
+  )
+
+
+  for(res of produits)
+  {
+      console.log(res.prixTtc)
+      somme += res.total
+  }
+
+  alert(somme)
+
+  
+//TABLEAU A 2 DIMENSIONS
+  var produits2 =[
+      ['carte graphique',10,100,200,100,'materiel'],
+      ['carte mère',8,599,699,100,'materiel']
+  ]
+
+  console.log(produits2[0][0]);
+
+  for(res in produits2)
+  {
+      console.log(produits2[res][0]);
+  }
+  
+</script>
+
+<table>
+  <tr>
+      <td>Nom</td>
+      <td>Qt</td>
+      <td>Prix</td>
+  </tr>
+</table>

@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: lightblue;
+}
+
+/* Position sticky */
+
+/* 
+    Position sticky est une alternative au positionnement fixed/absolute.
+    L'élément reste fixe dans son conteneur et "accroche" au limites de celui-ci.
+    Pour être sticky, il doit être dans un parent en position:relative;
+    et aussi avoir des indications de positionnement (top, left...)
+
+    Voir la compatibilité de position sticky sur caniuse.com
+*/
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.article {
+  width: calc(100vw - 240px);
+}
+
+.sticky-container {
+  background-color: tomato;
+  height: 1000px;
+  width: 200px;
+}
+
+.sticky {
+  padding: 20px;
+  color: white;
+  background-color: #b10d72;
+  /* position sticky vient avec une propriété top */
+  position: sticky;
+  top: 0px;
+}
+
+.sticky:after {
+  content: '';
+  display: block;
+  height: 60px;
+  background-image: url('../images/topshadow.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+}

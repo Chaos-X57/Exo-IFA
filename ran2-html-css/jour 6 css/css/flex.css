@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Le flex layout
+
+voir ici : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+et ici : https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/3298561-faites-votre-mise-en-page-avec-flexbox
+
+Exercice :  https://flexboxfroggy.com/#fr
+*/
+
+
+/* 1 - Menu exemple 
+---------------------------------------- */
+.menu {
+  background-color: tomato;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* display: flex -> mettre les li en colonnes */
+  display: flex;
+}
+
+/* sert à style le bouton */
+.menu ul li a {
+  display: block;
+  padding: 20px;
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+}
+.menu ul li a:hover {
+  background-color: rgb(196, 12, 12);
+}
+
+
+/* 2 - jumbo exemple 
+---------------------------------------- */
+
+.jumbo {
+  background-image: url('../images/mandalorian.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  margin: 100px 0;
+  height: 300px;
+  /* display: flex -> mettre les enfants directs en colonnes (le h1 et le a) */
+  display: flex;
+  flex-direction: column; /* row(par défaut) | column -> sens du flex */
+
+  /* ici controle la verticale: */
+  justify-content: center; 
+  /* flex-start(par défaut) |  flex-end | center | space-between | space-around | space-evenly -> controle de l'axe principal */
+  
+  /* ici controle l'horizontal: */
+  align-items: center;
+  /* stretch(par défaut) | center | flex-start | flex-end -> controle l'axe secondaire */
+}
+
+/* Styler un a sous la forme d'un bouton */
+.jumbo h1 {
+  margin-top: 0;
+}
+
+.btn {
+  background-color: #8c674a;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  /* height: 60px; */
+}
+
+
+
+/* 3 - Mise en page en colonnes
+---------------------------------------- */
+
+article {
+  background-color: #fabeb4;
+  padding: 5px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+}
+
+article img {
+  width: 200px;
+}
+
+
+/* Le flex permet une mise en page en colonnes */
+.conteneur {
+  display: flex; /* utilise le compositeur flex -> mise en page en colonnes */
+}

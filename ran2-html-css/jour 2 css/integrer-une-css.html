@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intégrer une CSS</title>
+
+  <!-- 2e methode, viser des éléments de la page pour leur attribuer un style (global à la page) -->
+  <style>
+    /* 
+    CSS: Cascading Style Sheet (feuille de style EN CASCADE)
+    selecteur css type:    
+    cible {
+      propriete1: valeur1;
+      propriete2: valeur2;
+      propriete3: valeur4;
+      ...
+    }
+    */
+
+    p {
+      color: green;
+      text-align: center;
+      font-size: 24px;
+    }
+  </style>
+
+
+  <!-- 3e methode : lien vers une CSS externe -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- on peut attacher plusieurs feuilles de style, et préciser pour quelle média celle-ci s'applique, ici: print -->
+  <link rel="stylesheet" href="css/style-print.css" media="print">
+</head>
+<body>
+  
+  <h1>Ajout d'une CSS dans un document HTML</h1>
+
+  <a href="https://cssreference.io/" target="_blank">Voir la références CSS sur cssreference.io</a><br>
+
+  <!-- 1ere methode: mettre du style directement sur la balise avec un attribut style="" -->
+  <p style="color: red; font-size: 60px;">Ajout d'un style sous la forme d'un attribut HTML</p>
+
+  <p>Autre texte</p>
+  <p>Autre texte</p>
+  <p>Autre texte</p>
+  <p>Autre texte</p>
+  <p>Autre texte</p>
+  <p>Autre texte</p>
+  <p>Autre texte</p>
+
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animations</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/anim.css">
+</head>
+
+<body>
+
+  <main>
+    <h1><i class="fas fa-star fa-spin"></i>Animations<i class="fas fa-star fa-spin"></i></h1>
+    <nav>
+      <ul class="dropdown" id="part1">
+        <li>
+          <a href="#"><i class="fas fa-star fa-spin"></i>Carré qui tourne<i class="fas fa-star fa-spin"></i></a>
+          <ul class="dropdown-items">
+            <div class="carre">
+              <div id="carreMouvant"></div>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul class="dropdown" id="part2">
+        <li>
+          <a href="#"><i class="fas fa-star fa-spin"></i>Balle qui rebondit dans un tube<i class="fas fa-star fa-spin"></i></a>
+          <ul class="dropdown-items">
+            <div class="carre">
+              <div class="container">
+              <div id="ball" class="carreMini"></div>
+              </div>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul class="dropdown" id="part3">
+        <li>
+          <a href="#"><i class="fas fa-star fa-spin"></i>Loader<i class="fas fa-star fa-spin"></i></a>
+          <ul class="dropdown-items">
+            <div class="carre">
+              <div id="exoload">
+              <div class="carre load"></div>
+              <div class="carre load"></div>
+              <div class="carre load"></div>
+              </div>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul class="dropdown" id="part4">
+        <li>
+          <a href="#"><i class="fas fa-star fa-spin"></i>Faire la queue<i class="fas fa-star fa-spin"></i></a>
+          <ul class="dropdown-items">
+            <div class="carre">
+              <div class="carreMini carreCourse"></div>
+              <div class="carreMini carreCourse"></div>
+              <div class="carreMini carreCourse"></div>
+              <div class="carreMini carreCourse"></div>
+              <div class="carreMini carreCourse"></div>
+              <div class="carreMini carreCourse"></div>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul class="dropdown" id="part5">
+        <li>
+          <a href="#"><i class="fas fa-star fa-spin"></i>Carrousel 3D<i class="fas fa-star fa-spin"></i></a>
+          <ul class="dropdown-items">
+            <div class="carre2">
+              <section id="slideshow">
+                <div class="entire-content">
+                  <div class="content-carrousel">
+                    <figure class="shadow"><img src="../images/noir.jpg"/></figure>
+                    <figure class="shadow"><img src="../images/soleil.gif"/></figure>
+                    <figure class="shadow"><img src="../images/orange.jpg"/></figure>
+                    <figure class="shadow"><img src="../images/red.jpg"/></figure>
+                    <figure class="shadow"><img src="../images/bleu.jpg"/></figure>
+                    <figure class="shadow"><img src="../images/blue.jpg"/></figure>
+                    <figure class="shadow"><img src="../images/planet.jpg"/></figure>
+                    <figure class="shadow"><img src="../images/big-bang.jpg"/></figure>
+                    <figure class="shadow"><img src="../images/wormhole.jpg"/></figure>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </main>
+  
+  <canvas id="canvas"></canvas>
+  <script src="../js/fil-rouge-muller-ludovic-dev2.js"></script>
+</body>
+</html>

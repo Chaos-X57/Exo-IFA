@@ -1,0 +1,60 @@
+/* 
+  Définir la typographie globale du document
+*/
+
+/* methode 3: ajouter une police personnalisée utilisable ensuite avec font-family: 'harry', sans-serif; */
+@font-face {
+  font-family: 'harry';
+  font-weight: 500;
+  src: url('../fonts/HRP.TTF');
+}
+
+
+body {
+  font-size: 16px;
+  /* methode 1: utiliser les polices du navigateur */
+  /* font-family: "Trebuchet Ms", Arial, Helvetica, sans-serif; */
+
+  /* methode 2: utiliser une google font https://fonts.google.com/
+  -> Ajouter le liens vers la css de la police dans le head du document HTML, puis utiliser la police comme indiqué sur le site avec font-family */
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  color: red;
+}
+
+
+h1, h2, h3 {
+  /* utilisation de la font personnalisée */
+  font-family: 'harry', serif;
+  font-weight: 200;
+}
+
+p {
+  /* fz: font-size changer la taille du texte */
+  font-size: 25px; /* fz: px, em, rem, pt, pc, cm, vh, vw, %... */
+  font-style: italic; /* fs: change le style de la typo (italic,normal, inherit, initial) */
+  font-weight: 200; /* fw: change la graisse de la police (light, lighter, normal, bold, bolder, 100, 200, 300, 400, 500, 600, 700, 800 900 */
+  font-family: 'Oswald', sans-serif; /* ff: changer la police de caractère */
+
+  text-align: center; /* tac, tal, tar -> alignent du texte (left, right, center, justify) */
+  text-decoration: none; /* tdn, tdu : changer la décoration du texte (underline, overline, line-through, none) */
+
+  line-height: 28px; /* lh: modifier l'espace entre les lignes */
+  letter-spacing: 20px; /* ls: modifer l'espace entre les lettres */
+  
+  text-transform: uppercase; /* ttu, ttl, ttc, ttn : change la casse des lettres (uppercase, lowercase, capitalize, none */
+
+  /* regrouper toutes les valeurs en une seule ligne */
+  font: underline italic bold 16px/60px 'Oswald', sans-serif;
+
+  color: blue;
+}
+
+div p {
+  font-style: inherit;
+  color: initial; 
+  /*
+  inherit : hérite du style du parent;
+  initial: hérite du style par défaut du navigateur
+  */
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TD Regex Muller Ludovic Dev2</title>
+  <style>
+
+    html {
+      background-color: blanchedalmond;
+    }
+    body {
+      width: 300px;
+      transform: translateY(150px);
+      margin: 0 auto;
+      text-align: center;
+      border: 1px solid black;
+      border-radius: 20px;
+      box-shadow: 1px 1px 1px black;
+      background-color: cornsilk;
+    }
+  
+    label {
+      font-weight: bold;
+    }
+  
+    input {
+      box-shadow: 1px 1px 1px black;
+    }
+  
+    span {
+      display: none;
+      font-weight: bold;
+      color: red;
+    }
+  
+    button {
+      font-weight: bold;
+      margin-bottom: 20px;
+      box-shadow: 1px 1px 1px black;
+      background-color: darkturquoise;
+    }
+  </style>
+</head>
+
+<body>
+
+    <h1>TD Regex Muller Ludovic Dev2</h1>
+
+    <label for="nom">Nom</label>
+    <br>
+    <input onkeyup="add()" type="text" name="nom" id="nom"> <span id="errorNom">Votre nom doit être en majuscule</span>
+    <br>
+    <br>
+    <label for="prenom">Prénom</label>
+    <br>
+    <input onkeyup="add()" type="text" name="prenom" id="prenom"> <span id="errorPrenom">Votre prénom doit contenir une majuscule</span>
+    <br>
+    <br>
+    <label for="date">Date de naissance</label>
+    <br>
+    <input onkeyup="add()" type="text" name="date" id="date"> <span id="errorDate">Votre date de naissance doit être au format dd/mm/aaaa</span>
+    <br>
+    <br>
+    <label for="mail">Email</label>
+    <br>
+    <input onkeyup="add()" type="text" name="mail" id="mail"> <span id="errorMail">Votre adresse mail doit contenir un '@'' et un '.'</span>
+    <br>
+    <br>
+    <label for="tel">Téléphone</label>
+    <br>
+    <input onkeyup="add()" type="text" name="tel" id="tel"> <span id="errorTel">Votre numéro de téléphone doit contenir dix chiffres</span>
+    <br>
+    <br>
+    <button onclick="ok1()">Envoyer</button>
+</body>
+
+<script>
+
+  function ok1() {
+
+    var nom = document.getElementById('nom').value;
+    var prenom = document.getElementById('prenom').value;
+    var date = document.getElementById('date').value;
+    var email = document.getElementById('mail').value;
+    var tele = document.getElementById('tel').value;
+
+    var nomReg = new RegExp("^[^a-z0-9]{1,}$");
+    var prenomReg = new RegExp("^[A-Z]{1}[a-z]{2,}$");
+    var dateReg = new RegExp("^[0-9]{2}[/][0-9]{2}[/][0-9]{4}$");
+    var emailReg = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+[.][a-zA-Z]{2,4}$");
+    var teleReg = new RegExp("^[0-9]{10}$");
+
+    if (nomReg.test(nom)) {
+      document.getElementById('errorNom').style.display = 'none';
+    }
+    else {
+      document.getElementById('errorNom').style.display = 'block';
+    }
+
+    if (prenomReg.test(prenom)) {
+      document.getElementById('errorPrenom').style.display = 'none';
+    }
+    else {
+      document.getElementById('errorPrenom').style.display = 'block';
+    }
+
+    if (dateReg.test(date)) {
+      document.getElementById('errorDate').style.display = 'none';
+    }
+    else {
+      document.getElementById('errorDate').style.display = 'block';
+    }
+
+    if (emailReg.test(email)) {
+      document.getElementById('errorMail').style.display = 'none';
+    }
+    else {
+      document.getElementById('errorMail').style.display = 'block';
+    }
+
+    if (teleReg.test(tele)) {
+      document.getElementById('errorTel').style.display = 'none';
+    }
+    else {
+      document.getElementById('errorTel').style.display = 'block';
+    }
+  }
+
+  function add() {
+
+    var nom = document.getElementById('nom').value;
+    var prenom = document.getElementById('prenom').value;
+    var date = document.getElementById('date').value;
+    var email = document.getElementById('mail').value;
+    var tele = document.getElementById('tel').value;
+
+    var nomReg = new RegExp("^[^a-z0-9]{1,}$");
+    var prenomReg = new RegExp("^[A-Z]{1}[a-z]{2,}$");
+    var dateReg = new RegExp("^[0-9]{2}[/][0-9]{2}[/][0-9]{4}$");
+    var emailReg = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+[.][a-zA-Z]{2,4}$");
+    var teleReg = new RegExp("^[0-9]{10}$");
+
+    if (nom == '') {
+      document.getElementById('errorNom').style.display = 'block';
+    }
+    else {
+      document.getElementById('errorNom').style.display = 'none';
+    }
+
+    if (prenom == '') {
+      document.getElementById('errorPrenom').style.display = 'block';
+    }
+    else {
+      document.getElementById('errorPrenom').style.display = 'none';
+    }
+
+    if (date == '') {
+      document.getElementById('errorDate').style.display = 'block';
+    }
+    else {
+      document.getElementById('errorDate').style.display = 'none';
+    }
+
+    if (email == '') {
+      document.getElementById('errorMail').style.display = 'block';
+    }
+    else {
+      document.getElementById('errorMail').style.display = 'none';
+    }
+
+    if (tele == '') {
+      document.getElementById('errorTel').style.display = 'block';
+    }
+    else {
+      document.getElementById('errorTel').style.display = 'none';
+    }
+
+    if (date.length == 2) {
+      document.getElementById('date').value = date+'/';
+    }
+    else if (date.length == 5) {
+      document.getElementById('date').value = date+'/';
+    }
+  }
+</script>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rejoins le Côté Obscur de la Force !</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/formulaire.css">
+</head>
+
+<body>
+
+  <form action="#" method="POST">
+
+    <h1><i class="fab fa-sith fa-spin"></i>Rejoins le Côté Obscur de la Force !<i class="fab fa-sith fa-spin"></i></h1>
+
+        <div id="identite" class="identite row">
+          <div class="col">
+            <p class="input-form">
+              <label for="agence">Sanctuaire de :</label>
+              <input type="text" name="agence" id="agence">
+            </p>
+            <p class="input-form">
+              <label for="email1">Mail Galactique :</label>
+              <input type="email" name="email" id="email1">
+            </p>
+          </div>
+
+          <div class="col">
+            <p class="input-form">
+              <label for="tel1">Tél Galactique :</label>
+              <input type="tel" name="tel" id="tel1">
+            </p>
+            <p class="input-form">
+              <label for="fax1">Fax Galactique :</label>
+              <input type="tel" name="fax" id="fax1">
+            </p>
+          </div>
+        </div>
+
+    <div id="demande" class="demande row">
+      <h2 class="col-small">Votre demande concerne :</h2>
+      <div class="col-large" id="cadre-gris">
+          <label>
+            <input type="checkbox" name="demande" id="demande-1">
+            Une formation de Sith avec un Maître Sith
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="demande" id="demande-2">
+            Une formation de Sith avec un Seigneur Sith
+          </label>
+          <br>
+          <label>
+            <input type="checkbox" name="demande" id="demande-3">
+            Autre formation, précisez:
+          </label>
+        <input class="input-cadre" type="text" name="demande-precision" id="demande-precision" >
+      </div>
+    </div>
+
+    <div id="installateur" class="installateur">
+      <h3><i class="fab fa-sith fa-spin"></i> Maître/Seigneur Sith</h3>
+      <p class="input-form-wide">
+        <label for="societe">Clan Sith :</label>
+        <input type="text" name="societe" id="societe">
+      </p>
+      <p class="input-form-wide">
+        <label for="nom-correspondant">Nom Sith :</label>
+        <input type="text" name="nom-correspondant" id="nom-correspondant">
+      </p>
+      <p class="input-form-wide">
+        <label for="adresse1">Planete :</label>
+        <input type="text" name="adresse" id="adresse1">
+      </p>
+      <div class="row">
+        <p class="col input-form">
+          <label for="cp1">Code Planete :</label>
+          <input type="text" name="cp" id="cp1">
+        </p>
+        <p class="col input-form">
+          <label for="ville1">Ville :</label>
+          <input type="text" name="ville" id="ville1">
+        </p>
+      </div>
+      <div class="row">
+        <p class="col input-form">
+          <label for="tel2">Tél Galactique :</label>
+          <input type="tel" name="tel" id="tel2">
+        </p>
+        <p class="col input-form">
+          <label for="portable1">Communicateur :</label>
+          <input type="tel" name="portable" id="portable1">
+        </p>
+      </div>
+      <div class="row">
+        <p class="col input-form">
+          <label for="email2">Mail Galactique :</label>
+          <input type="email" name="email" id="email2">
+        </p>
+        <p class="col input-form">
+          <label for="fax2">Fax Galactique :</label>
+          <input type="tel" name="fax" id="fax2">
+        </p>
+      </div>
+    </div>
+
+    <div id="client" class="client">
+      <h3><i class="fab fa-sith fa-spin"></i> Apprenti Sith</h3>
+      <div class="row">
+        <p class="col input-form">
+          <label for="nom">Nom Apprenti :</label>
+          <input type="text" name="nom" id="nom">
+        </p>
+        <p class="col input-form">
+          <label for="prenom">Nom Sith :</label>
+          <input type="text" name="prenom" id="prenom">
+        </p>
+      </div>
+      <p class="input-form-wide">
+        <label for="adresse2">Planete :</label>
+        <input type="text" name="adresse" id="adresse2">
+      </p>
+      <div class="row">
+        <p class="col input-form">
+          <label for="cp2">Code Planete :</label>
+          <input type="text" name="cp" id="cp2">
+        </p>
+        <p class="col input-form">
+          <label for="ville2">Ville :</label>
+          <input type="text" name="ville" id="ville2">
+        </p>
+      </div>
+      <div class="row">
+        <p class="col input-form">
+          <label for="tel3">Tél Galactique :</label>
+          <input type="tel" name="tel" id="tel3">
+        </p>
+        <p class="col input-form">
+          <label for="portable2">Communicateur :</label>
+          <input type="tel" name="portable" id="portable2">
+        </p>
+      </div>
+      <p class="input-form-wide">
+        <label for="email3">Mail Galactique :</label>
+        <input type="email" name="email" id="email3">
+      </p>
+    </div>
+
+    <div id="materiel" class="materiel">
+      <h3><i class="fab fa-sith fa-spin"></i> Sabre Laser</h3>
+      <p class="input-form-wide">Couleur :
+        <select name="type" id="type">
+          <option value="1">Selectionner dans la liste...</option>
+          <option value="2">Rouge !</option>
+          <option value="3">Vert (Sale Jedi !)</option>
+          <option value="4">Bleu (Tu seras annihilé !)</option>
+          <option value="5">Violet (On sait comment fini Mace Windu...)</option>
+        </select>
+      </p>
+      <p class="input-form-wide">
+        <label for="date">Remis le :</label>
+        <input type="text" name="date" id="date">
+      </p>
+      <p class="input-form-checkbox">Problèmes éventuels :
+        <label></label>
+        <input type="radio" name="oui-non"> Oui
+        <input type="radio" name="oui-non"> Non
+      </p>
+      <p class="input-form-wide">
+        <label for="lesquels">Si oui, lesquels :</label>
+        <input type="text" name="lesquels" id="lesquels">
+      </p>
+    </div>
+
+    <div id="à-confirmer" class="à-confirmer">
+      <p class="input-form-à-confirmer">
+        <label >Rendez-vous à confirmer :</label>
+        <input type="checkbox" name="rendez-vous" id="rendez-vous1"> au Maître Sith
+        <input type="checkbox" name="rendez-vous" id="rendez-vous2"> au Seigneur Sith
+        <input type="checkbox" name="rendez-vous" id="rendez-vous3"> à l'Apprenti
+      </p>
+      <p class="input-form-à-confirmer">
+        <label >Proposition d'un contrat :</label>
+        <input type="radio" name="proposition" id="proposition1"> Oui
+        <input type="radio" name="proposition" id="proposition2"> Non
+      </p>
+      <p class="input-form-à-confirmer">
+        <label >Envoyer par Fax Galactique ou par Mail Galactique une copie du contrat :</label>
+        <input type="radio" name="envoyer" id="envoyer1"> Oui
+        <input type="radio" name="envoyer" id="envoyer2"> Non
+      </p>
+      <p class="input-form-à-confirmer">
+        <label >Si oui, à qui :</label>
+        <input type="checkbox" name="à-qui" id="à-qui1"> au Maître/Seigneur Sith
+        <input type="checkbox" name="à-qui" id="à-qui2"> à l'Apprenti
+      </p>
+    </div>
+
+    <div class="dernier">
+        <p id="px">Pour toute autre information,</p>
+        <p>ou si vous pensez être le véritable élu de la Force.</p>
+        <p>Merci de nous laisser un commentaire avec vos motivations.</p>
+        <label for="commentaire"></label><br>
+        <textarea name="commentaire" id="commentaire" placeholder="Commentaire :"></textarea>
+        <button type="reset">Envoyer</button>
+    </div>
+
+  </form>
+
+  <canvas id="canvas"></canvas>
+  <script src="../js/fil-rouge-muller-ludovic-dev2.js"></script>
+</body>
+
+</html>

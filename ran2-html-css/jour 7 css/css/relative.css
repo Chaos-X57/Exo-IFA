@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Position des élements */
+
+/* 
+  Tous les éléments de la page font partie d'un flux, et disposent d'un positionnement par défaut: 
+  
+  postion: static;
+*/
+
+/* 
+  Avec les propriétés css, on peut jouer avec ce positionnement pour le changer et ainsi attribuer de nouvelles positions à l'élément:
+
+  position: relative;
+  top: 10px;
+  left: -10px;
+  bottom: auto;
+  right: auto;
+
+  RELATIVE: 
+  - se positionne relativement par rapport à sa position normale dans le flux de la page.
+  - sa position initiale est conservée dans le flux (fantôme)
+*/
+
+.box {
+  background-color: tomato;
+  color: #fff;
+  padding: 40px;
+  position: relative;
+  /* la référence des coordonnées est lui-même (çad sa position actuelle dans le flux de la page) */
+  top: -30px; 
+  left: 100px;
+  /* top: 
+  left: 
+  right:
+  bottom: */
+  /*  */
+}
+
+.lettrine {
+  /* sert à donner le box-model au span */
+  display: block;
+  /* sert à l'habillage du texte autour de l'objet */
+  float: left;
+  /* sert utiliser un positionnement qui va permettre de décaller l'objet par rapport à sa position normale conservée */
+  position: relative;
+  /* top et left permettent le décalage de position */
+  top: -5px;
+  left: -10px;
+  
+  /* dimensions du block */
+  width: 40px;
+  height: 40px;
+  
+  /* description du reste des propriétés de la lettrine */
+  background-color: tomato;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 100%;
+  font-weight: bold;
+}
+
+p {
+  padding-left: 20px;
+}

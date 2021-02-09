@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+body:hover {
+  background-image: url("../images/star.jpg");
+}
+
+body:hover h1 {
+  color: white;
+}
+
+.container {
+  width: 800px;
+  height: 800px;
+  border: 1px solid black;
+  margin: 5% auto;
+  background-image: url("../images/soleil.jpg");
+  background-size: cover;
+}
+
+.container:hover {
+  background-image: url("../images/react.gif");
+}
+
+.part1 {
+  position: relative;
+  bottom: 50px;
+  width: 700px;
+  height: 700px;
+  border: 1px solid black;
+  margin: 100px auto;
+  background-image: url("../images/code.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.part1:hover {
+  background-image: url("../images/humip.gif");
+}
+
+.part2 {
+  position: relative;
+  top: 20px;
+  right: 150px;
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  margin: 50px auto;
+  background-image: url("../images/Ushuaya.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.part2:hover {
+  background-image: url("../images/planet.gif");
+}
+
+.part3 {
+  position: relative;
+  left: 300px;
+  bottom: 51px;
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  margin: 50px auto;
+  background-image: url("../images/chat.jpg");
+}
+
+.part3:hover {
+  background-image: url("../images/humi.gif");
+  background-position: center;
+}
+
+.part4 {
+  position: relative;
+  top: 250px;
+  right: 2px;
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  margin: 50px auto;
+  background-image: url("../images/mars.jpg");
+  background-position: center;
+}
+
+.part4:hover {
+  background-image: url("../images/main.gif");
+  background-position-x: -150px;
+  background-position-y: -80px;
+}
+
+.part5 {
+  position: relative;
+  right: 300px;
+  bottom: 50px;
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  margin: 50px auto;
+  background-image: url("../images/octo.jpg");
+  background-position: center;
+}
+
+.part5:hover {
+  background-image: url("../images/tunel.gif");
+}

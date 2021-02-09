@@ -1,0 +1,69 @@
+/* Mise en page en colonnes
+---------------------------------------- */
+body {
+  margin: 0;
+}
+
+article {
+  background-color: #fabeb4;
+  padding: 5px;
+  /* margin-left: 10px;
+  margin-right: 10px; */
+
+  margin-bottom: 60px;
+}
+
+article img {
+  width: 200px;
+}
+
+/* Le flex permet une mise en page en colonnes */
+.conteneur {
+  padding: 10px;
+  display: flex; 
+  /* utilise le compositeur flex -> mise en page en flex (par défaut mise en forme en 'row' çàd les élements sont sur la même ligne */
+}
+
+
+/* Exemple 1 : gérer la distribution des éléments flex  avec justify-content */
+
+.conteneur-1 {
+  justify-content: space-between;
+}
+
+.conteneur-1 article {
+  width: 200px;
+  padding-right: 10px;
+}
+
+.conteneur-1 article h2 {
+  color: gray;
+}
+
+
+/* Exemple 2 : controler les dimensions des élément avec flex */
+
+.conteneur-2 {
+  justify-content: space-between;
+}
+
+.conteneur-2 article {
+  flex: 1;
+  min-width: 200px;
+}
+
+.conteneur-2 article:nth-child(1) {
+  background-color: red;
+  flex: .5;
+}
+
+
+/* Exemple 3 : controler les dimensions des élément avec flex */
+
+.conteneur-3 {
+  justify-content: space-evenly;
+}
+
+.conteneur-3 article {
+  width: 200px;
+}

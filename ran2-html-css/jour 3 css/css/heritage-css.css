@@ -1,0 +1,124 @@
+/*
+****** LES SELECTEURS CSS DE BASE ******
+*/
+body {
+  color: gray;
+}
+
+/* TAGNAME: nom de la balise */
+
+h1 {
+  color: blue;
+}
+
+/* Class: attribut class de la balise */
+
+.center {
+  text-align: center;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+/* ID : identifiant unique dans la page d'une balise */
+
+#swag {
+  color: mediumorchid;
+}
+
+/* Attribut : entre crochets */
+
+[type="email"]{
+  border-color: red;
+}
+
+
+/*
+  ****** LA PRIORITÉ DES SELECTEURS ******
+*/
+
+/* TAG: 1 point */
+li {
+  color: orange;
+}
+
+/* à égalité de points, c'est toujours le dernier qui gagne */
+li {
+  color: red;
+}
+
+/* class: 10 points */
+/* classe prioritaire sur le tag */
+.conflit {
+  color: palevioletred;
+}
+
+/* attribut: 10 points */
+[title="bonjour"] {
+  color: blue;
+}
+
+/* id: 100 points */
+/* id est + prioritaire que la class et le tag */
+#hot {
+  color: mediumseagreen;
+}
+
+/* On peut cumuler les sélecteurs, il faut ajouter les points */
+/* 111 points */
+li.conflit#hot {
+  color: darkblue;
+}
+
+/* 112 points */
+ul li.conflit#hot {
+  color: violet;
+}
+
+
+/*
+****** SÉLECTEURS SPÉCIAUX ******
+*/
+
+/* Sélecteur global :
+sélection de tous les éléments qui se trouvent
+dans un autre élément
+*/
+
+div * {
+  /* ici on séléctionne tous les éléments enfants du div */
+  color: none;
+}
+
+form p {
+  /* ici on sélectionne tous les p qui se trouvent dans une balise form (peut importe s'ils sont des enfants directs ou indirects */
+  color: burlywood;
+}
+
+/* Sélectionne uniquement les enfants directs
+çàd les p qui sont directement les enfants de form */
+/* ici, 
+le p qui se trouve dans un div qui se trouve dans le form n'est pas visé */
+form > p {
+  color: brown;
+}
+
+/* sélectionne le frère directe d'une balise, ici
+on vise le UL qui est directement après le form */
+form + ul {
+  margin-top: 100px;
+}
+
+form + p {
+  margin-top: 100px;
+  /* ici aucune influence car le p n'est pas le frère direct du form */
+}
+
+/* 
+ici on sélectionne les frères directs et indirects
+*/
+
+form ~ p {
+  margin-top: 100px;  
+}

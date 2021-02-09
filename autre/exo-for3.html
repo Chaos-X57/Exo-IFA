@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exo for 3</title>
+</head>
+<body>
+  
+  <label for="nom">Votre nom ?</label>
+  <input type="text" id="nom"> <span id="error1"></span>
+  <br>
+  <br>
+  <label for="prenom">Votre prénom ?</label>
+  <input type="text" id="prenom"> <span id="error2"></span>
+  <br>
+  <br>
+  <button type="submit" onclick="nomPrenom()">Ok</button>
+  <br>
+  <br>
+  <div id="div1"></div>
+  <br>
+  <div id="div2"></div>
+
+  <script>
+    function nomPrenom(){
+
+    var prenom = ['Cédric', 'Bernard', 'Joseph', 'Aurélie', 'Chloé', 'Anthony', 'Denis'];
+    var nom = ['Durand', 'Dupond', 'Baune', 'Michel'];
+    var i;
+    var textPrenom ='';
+    var textNom = '';
+    var newNom = document.getElementById('nom').value;
+    var newPrenom = document.getElementById('prenom').value;
+
+    if (!prenom.includes(newPrenom)) {
+      prenom.push(newPrenom);
+    }
+
+    if (!nom.includes(newNom)) {
+      nom.push(newNom);
+    }
+
+    if (newNom == '') {
+      document.getElementById('error1').innerHTML = 'Saisir votre nom';
+      document.getElementById('error1').style.color = 'red';
+      prenom.length = prenom.length-1;
+    }
+
+    if (newPrenom == '') {
+      document.getElementById('error2').innerHTML = 'Saisir votre prénom';
+      document.getElementById('error2').style.color = 'red';
+      nom.length = nom.length-1
+    }
+
+    for (i=0; i < prenom.length; i++) {
+      textPrenom += prenom[i]+'<br>';
+    }
+
+    for (i=0; i < nom.length; i++) {
+      textNom += nom[i]+'<br>';
+    }
+
+    prenom.sort();
+    nom.reverse();
+
+    document.getElementById('div1').innerHTML = 'Il y a '+prenom.length+' prénoms dans le tableau, voici les prénoms : <br><br>'+textPrenom;
+    document.getElementById('div2').innerHTML = 'Il y a '+nom.length+' noms dans le tableau, voici les noms : <br><br>'+textNom;
+
+    }
+  </script>
+</body>
+</html>

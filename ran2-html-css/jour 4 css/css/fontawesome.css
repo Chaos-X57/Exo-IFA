@@ -1,0 +1,30 @@
+/* styles reset de base */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* resets supplémentaires */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+  text-align: center;
+  margin: 40px;
+  font-size: 40px;
+}
+
+h1 i {
+  margin-bottom: 40px;
+  font-size: 100px;
+}

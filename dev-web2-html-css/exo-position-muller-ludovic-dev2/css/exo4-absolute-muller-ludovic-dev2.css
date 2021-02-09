@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+body:hover {
+  background-image: url("../images/star.jpg");
+}
+
+body:hover h1 {
+  color: white;
+}
+
+.container {
+  width: 800px;
+  height: 600px;
+  border: 1px solid black;
+  margin: 5% auto;
+  background-image: url("../images/soleil.jpg");
+  background-size: cover;
+}
+
+.container:hover {
+  background-image: url("../images/react.gif");
+}
+
+.part1 {
+  position: absolute;
+  left: 10px; right: 180px; top: 250px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 100px auto;
+  background-image: url("../images/code.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.part1:hover {
+  background-image: url("../images/humip.gif");
+}
+
+.part2 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 50px auto;
+  background-image: url("../images/Ushuaya.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.part2:hover {
+  background-image: url("../images/planet.gif");
+}
+
+.part3 {
+  position: absolute;
+  bottom: -250px; left: 250px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 50px auto;
+  text-align: center;
+  line-height: 165px;
+  background-image: url("../images/chat.jpg");
+  background-position: top;
+  background-position-y: 20%;
+  background-repeat: no-repeat;
+}
+
+.part3:hover {
+  background-image: url("../images/humi.gif");
+  background-position: center;
+}
+
+.part4 {
+  position: absolute;
+  right: -135px; top: -490px;
+  width: 700px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 50px auto;
+  background-image: url("../images/mars.jpg");
+  background-position: center;
+}
+
+.part4:hover {
+  background-image: url("../images/main.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 22%;
+}

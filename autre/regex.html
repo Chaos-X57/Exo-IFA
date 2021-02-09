@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regex</title>
+</head>
+
+<body>
+  
+  <h1>Regex</h1>
+
+  <label for="test">MDP</label>
+  <br>
+  <input type="text" name="test" id="test">
+  <br>
+  <br>
+  <button onclick="ok1()">Ok</button>
+  <br>
+  <br>
+  <label for="phrase">Phrase</label>
+  <br>
+  <input type="text" name="phrase" id="phrase">
+  <br>
+  <br>
+  <label for="rech">Recherche</label>
+  <br>
+  <input type="text" name="rech" id="rech">
+  <br>
+  <br>
+  <button onclick="ok2()">Ok</button>
+  <br>
+  <br>
+  <label for="date">Date</label>
+  <br>
+  <input onkeyup="add()" type="text" name="date" id="date">
+  <br>
+  <br>
+  <button onclick="ok3()">Ok</button>
+  <br>
+  <br>
+  <label for="mail">Mail</label>
+  <br>
+  <input type="text" name="mail" id="mail">
+  <br>
+  <br>
+  <button onclick="ok4()">Ok</button>
+</body>
+
+<script>
+
+  function ok1() {
+
+    var test = document.getElementById('test').value;
+    var ok = new RegExp("^[A-Za-z0-9]{8,12}$","g");
+
+    if (ok.test(test)) {
+      alert('Valide');
+    }
+    else {
+      alert('Non valide');
+    }
+  }
+
+  function ok2() {
+
+    var phrase = document.getElementById('phrase').value;
+    var rech = document.getElementById('rech').value+' ';
+    var ok2 = new RegExp(phrase, "g");
+    var ok3 = new RegExp(rech, "g");
+
+    if (ok3.test(ok2)) {
+      alert('Le mot est dans la phrase');
+    }
+    else {
+      alert('Le mot n\'est pas dans la phrase');
+    }
+
+  }
+
+  function ok3() {
+
+    var date = document.getElementById('date').value;
+    var ok4 = new RegExp("^[0-9]{2}[/][0-9]{2}[/][0-9]{4}$","g");
+
+    if (ok4.test(date)) {
+      alert('La date est valide');
+    }
+    else {
+      alert('La date n\'est pas valide');
+    }
+  }
+
+  function add() {
+
+    var date = document.getElementById('date').value;
+
+    if (date.length == 2) {
+      document.getElementById('date').value = date+'/';
+    }
+    else if (date.length == 5) {
+      document.getElementById('date').value = date+'/';
+    }
+  }
+
+  function ok4() {
+
+    var mail = document.getElementById('mail').value;
+    var ok5 = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+[.][a-zA-Z]{2,4}$");
+
+    if (ok5.test(mail)) {
+      alert('Mail valide')
+    }
+    else {
+      alert('Mail non valide')
+    }
+  }
+</script>
+</html>

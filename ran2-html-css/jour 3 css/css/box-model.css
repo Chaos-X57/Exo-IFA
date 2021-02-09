@@ -1,0 +1,151 @@
+* {
+  /* règle que le navigateur utilise pour mesurer les dimensions des boites */
+  box-sizing: border-box; 
+  
+  /* par défaut c'est 'content-box' qui s'applique au texte du contenu, pas à la boite.
+  Le mettre sur border-box nous évite bien des calculs */
+}
+
+
+/* 
+  En CSS, tout élement est inclus dans une boîte ("box" en anglais). Comprendre le fonctionnement de ces boîtes est essentiel pour maîtriser la mise en page CSS ainsi que le positionement des élements d'une page HTML. 
+ */
+
+/* 1 - MODIFIER L'ASPECT D'UNE BOITE AVEC 'display' */
+
+span {
+  /* change le display par défaut du span */
+  display: block;
+  background-color: lightgreen;
+}
+
+/* s'applique uniquement aux div qui ont comme parent un autre div */
+div div {
+  /* change le display par défaut du div qui est dans le div */
+  display: inline;
+  background-color: lightgreen;
+}
+
+
+/* 2 - LES MESURES DU BOX MODEL */
+
+p, div {
+  
+  /* dimensions de la boite */
+  /* ------------------------- */
+  /* width: 50%; */
+  /* 50% de l'espace disponible dans son parent */
+  width: 250px; 
+  /* 250px - 30px padding - 10px border */
+
+
+  /* 50% de l'espace disponible dans la fenêtre (viewport) */
+
+  height: 200px; /* px, %, vh, vw, em, rem */
+
+  /* marge intérieure */
+  /* ------------------------- */
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  
+  /* toutes les valeurs ensemble */
+  padding: 40px;
+  /* haut/bas gauche/droite */
+  padding: 40px 20px;
+
+  /* haut gauche/droite bas */
+  padding: 40px 20px 30px;
+
+  /* haut droite bas gauche */
+  padding: 40px 20px 30px 10px;
+
+
+  /* margin: marges exterieures */
+  /* ------------------------- */
+  margin-top: 40px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+
+  margin: 20px;
+
+  /* margin haut, droite, bas, gauche */
+  margin: 40px 15px 20px 10px;
+
+  /* margin haut/bas gauche/droite */
+  margin: 30px 15px;
+
+  /* margin haut gauche/droite bas */
+  margin: 30px 15px 10px;
+
+
+  /* Bordures */
+  /* ------------------------- */
+
+  /* mesure raccourcie pour les trois valeurs: largeur, style, couleur */
+  border: 14px solid #ff0095;
+
+  border-style: solid;
+  border-style: dotted;
+  border-style: dashed;
+  border-style: groove;
+  border-style: outset;
+  border-style: inset;
+  border-style: double;
+  
+  border-left-style: solid;
+  border-right-style: groove;
+  border-bottom-style: dashed;
+  border-top-style: dotted;
+
+  border-left-color: red;
+  border-right-color: blue;
+  border-bottom-color: green;
+  border-top-color: black;
+
+  border-left-width: 10px;
+  border-right-width: 3px;
+  border-top-width: 20px;
+  border-bottom-width: 15px;
+
+  border-width: 5px;
+  
+  border-bottom: 10px dashed orange;
+}
+
+
+p.block-center {
+  /* la valeur auto calcule automatiquement les marges,
+  ici à gauche et à droite, donc le paragraphe apparaît centré dans son parent (la page). */
+  margin: 40px auto;
+}
+
+
+/* nouveau sélecteur: ,
+applique les propriétés css à 2 sélecteurs ou plus */
+p, div, span {
+  color: white;
+  background-color: coral;
+}
+
+/*
+span, a, em, sub, sup {
+  /* par défaut a un display: inline;  *\/
+}
+
+h2, div, p, ul {
+  /* par défaut a un display: block;  *\/
+}
+
+li {
+  /* display: list-item *\/
+}
+
+table {
+  /* display: table... *\/
+}
+
+/* Vous pouvez aller voir: https://developer.mozilla.org/fr/docs/Web/CSS/display *\/
+*/

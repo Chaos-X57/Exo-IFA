@@ -1,0 +1,20 @@
+img {
+  width: 180px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* permet de faire 'flotter' un élément à gauche ou à droite de la mise en page naturelle du texte (le flux) */
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+/* on utilise le clear pour empêcher un flottant de se mettre à côté d'un autre -> clear: left | right | both; */
+
+.clearfix {
+  clear: both;
+}

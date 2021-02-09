@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  transition: .4s;
+}
+
+body {
+  margin: 0;
+}
+
+
+/* 
+    Les pseudo-classes 
+    ------------------
+    Définition: Une pseudo-classe est un mot-clé qui peut être ajouté à un sélecteur afin d'indiquer l'état spécifique dans lequel l'élément doit être pour être ciblé par la déclaration.
+*/
+
+input.formControl {
+  color: lightgray;
+  border: 6px solid lightgray;
+  padding: 10px 20px;
+  font-family: arial, helvetica, sans-serif;
+  /* transition: anime la transition entre les états (hover, focus...) */
+}
+
+
+/* :hover -> permet de styler l'état au survol de la souris */
+input.formControl:hover {
+  border-color: red;
+  padding: 20px 20px;
+}
+
+input.formControl:focus {
+  border-color: blueviolet;
+  padding: 30px 40px;
+}
+
+/* a : état survollé du lien */
+
+a {
+  color: lightslategray;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #47c5ff;
+  text-decoration: underline;
+}
+
+a:focus {
+  color: #df20a6;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #a9df20;
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
+}
+
+
+/* appliquer un changement au span lorsque le a est survollé: */
+
+
+a span:hover {
+  background-color: tomato;
+}
+
+a:hover span{
+  border: 2px solid green;
+}
+
+
+/* pseudo-classe :empty vise les balises vides */
+
+p:empty {
+  width: 200px;
+  height: 10px;
+  background-color: red;
+}
+
+/* Exercice HOMER */
+
+.homer {
+  background-color: #ffd000;
+  margin: 60px auto;
+  width: 100px;
+  height: 160px;
+  border-radius: 20px 20px 50px 50px;
+  text-align: center;
+  padding: 30px 5px;
+  /* box-shadow: décalx décaly blur (decalOmbre) color */
+  box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, 0.258);
+}
+
+.homer .eye {
+  background-color: #fff;
+  /* box model ne s'applique pas sur un i */
+  width: 30px;
+  height: 50px;
+  /* il faut changer le display */
+  display: inline-block;
+  font-size: 40px;
+  line-height: 10px;
+  border-radius: 15px;
+  transform: translate(10px, 0px);
+  box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, 0.258);
+  border: 2px solid black;
+  border-right-color: transparent;
+}
+
+/* exercice : 
+  au survol de homer,
+  le faire devenir en colère (fond rouge)
+*/
+
+.homer:hover {
+  background-color: red;
+}
+
+/* exercice 2 : 
+  au survol de homer,
+  ses 2 yeux se plissent 
+*/
+ .homer:hover .eye {
+  height: 30px;
+  background-color: black;
+  border-color: white;
+  transition: 0.9s;
+}
+
+.homer::before {
+  content: "!!!";
+  font-size: 50px;
+  display: block;
+  margin: 10px auto;
+}

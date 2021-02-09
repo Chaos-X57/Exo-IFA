@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position fixed</title>
+  <link rel="stylesheet" href="css/fixed.css">
+
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    // Je peux mettre du script ici
+    console.log('Hello du script de la page');
+  </script>
+  
+  <!-- je peux aussi mettre du script depuis un fichier externe -->
+  <script src="js/script-popup.js"></script>
+</head>
+
+<!-- je peux mettre du script dans les balises -->
+<body onload="console.log('Hello World'); count = 0">
+  <!-- les scripts réagissent à des événements
+    voir la liste des événements possibles sur le MDN : https://developer.mozilla.org/en-US/docs/Web/Events
+  -->
+  <button onclick="togglePopup()" id="open">Ouvrir le popup</button>
+
+  <p onclick="console.log('vous avez cliqué sur le p ' + (count++) )">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>7 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>8 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>7 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+  <p>8 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dicta blanditiis hic numquam repellat, vel
+    voluptatibus corporis quidem placeat minima a molestiae cupiditate iure ullam modi magni quis quisquam maxime.</p>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="popup">
+      <h2>Ceci est un popup</h2>
+      <p>
+        Vous avez gagné 10000000000 € 
+      </p>
+
+      <button onclick="togglePopup()" id="close">Fermer le popup</button>
+    </div>
+  </div>
+</body>
+</html>

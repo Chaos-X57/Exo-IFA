@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+.cuby {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d60bd6;
+  border-radius: 10%;
+  width: 200px;
+  height: 200px;
+  font-family: sans-serif;
+  font-size: 90px;
+  line-height: 90px;
+  text-align: center;
+  padding: 50px;
+  color: white;
+  box-shadow: 0 0 40px rgba(0,0,0,.5);
+  
+  /* gérer l'animation au changement d'état (ici hover) */
+  transition: all .3s;
+}
+
+.cuby:hover {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+
+.cuby-animation {
+  /* controler les animations qui sont appliquées à l'élément qui a la classe */
+  animation-name: move;
+  /* animation-name: pulse, move; */
+
+  /* controler les animations qui sont appliquées à l'élément qui a la classe */
+  animation-duration: 10s;
+  /* animation-duration: .2s, 10s; */
+  
+  /* le nombre de répétition de l'animation (ici infinite: se répète indéfiniment) */
+  animation-iteration-count: infinite;
+
+  /* dans quel sens se déroule l'animation normal, reverse, alternate, alternate-reverse */
+  animation-direction: alternate;
+  
+  /* à la fin de l'animation, quel sera l'état de l'objet: forward, backward, both */
+  animation-fill-mode: both;
+
+  /* gère la fonction d'accélération de l'animation */
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); /* linear, ease, ease-in, ease-out, ease-in-out, cubic-bezier(0.68, -0.55, 0.265, 1.55);*/
+}
+
+/* descriptions des étapes de chaque animation */
+
+/* animation move */
+@keyframes move {
+  /* on peut décrire autant d'étapes de l'animation que l'on souhaite en utilisant des pourcents de 0 (début) à 100% (fin) */
+  0% {
+    left: 50%;
+    top: 50%;
+    font-size: 90px;
+  }
+
+  25% {
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  50% {
+    left: 75%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  75% {
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  100% {
+    left: 75%;
+    top: 10%;
+    font-size: 60px;
+  }
+}
+
+/* animation pulse */
+@keyframes pulse {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}

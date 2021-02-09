@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+/* 
+    Position fixed:
+    - se comporte un peu comme un position absolute
+    - sort du flux de la page
+    - se positionne par rapport au coin haut gauche DE LA FENÊTRE (VIEWPORT)
+    - la différence entre position fixed et position absolute, est que l'élément reste attaché 
+      à la position définie par rapport à la fenêtre et pas au document : même si on scroll dans la page
+    IL RESTE FIXE
+*/
+
+.box {
+  background-color: tomato;
+  color: #fff;
+  padding: 40px;
+  position: fixed;
+  /* par défaut, le point 0 de son système de coordonnées en absolute devient le 0,0 du document html. */
+
+  /* Si l'un de ses parents n'est plus en position: static (absolute, fixed, relative), son système de coordonnées devient le 0,0 de son parent qui a cette propriété (absolute, fixed, relative). */
+  bottom: 0px; 
+  right: 0px;
+}
+
+
+/* Cas d'application
+----------------------------------------- */
+
+
+/*  1 - Menu attaché en haut de page */
+body {
+  /* ici ne pas oublier de réserver l'espace pour la navigation afin que le contenu de départ ne soit pas masqué en dessous. */
+  padding-top: 80px;
+}
+
+/* le menu est attaché en (position: fixed) à la fenêtre (top: 0, left: 0) */
+.menu {
+  background-color: #ac1e05;
+  padding: 20px 0;
+  
+  
+  /* positionne le menu en fixe dans la page */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  /* gère la position z de la navigation (sur le calque 1) */
+  z-index: 1;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 40px;
+  background-color: #d72f12;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu a:hover,
+.menu a:focus,
+.menu a:active {
+  background-color: #f94b24;
+}
+
+
+/*  2 - Popup en supperposition de toute la page */
+
+.overlay {
+
+  position: fixed;
+  /* gère la position z de la navigation (sur le calque 1) */
+  z-index: 999;
+  background-color: rgba(0,0,0,.7);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.popup {
+  /* attache l'élément à la fenêtre et sort du flux de la page (comme sur un nouveau calque */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  /* définit la position z de l'élément */
+  z-index: 1000;
+
+  /* repositionne le centre de l'objet */
+  transform: translate(-50%, -50%);
+  
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 20px rgba(0,0,0,.5);
+}

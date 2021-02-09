@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-right: 50px;
+  padding: 26px 0px 8px 50px;
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #74b700;
+  /* border-radius: haut-gauche haut-droite bas-droite bas-gauche */
+  border-radius: 0 0 20px 0;
+}
+
+/* formulaires */
+#demande {
+  margin-right: 0;
+}
+
+.input-form-wide label,
+.input-form label {
+  display: inline-block;
+  width: 30%;
+}
+.input-form-wide input,
+.input-form input {
+  width: 68%;
+  padding: 8px 15px;
+  border: 0px none;
+  background-color: #e9e7e7;
+}
+
+.input-form-wide label {
+  width: 15%;
+}
+.input-form-wide input {
+  width: 84%;
+}
+
+.input-form-wide select {
+  display: inline-block;
+  width: 34%;
+  padding: 8px 15px;
+  margin-left: 12.7%;
+}
+
+.input-form-checkbox input {
+  display: inline-block;
+  width: 2%;
+  margin-left: 6.3%;
+}
+
+.un {
+  display: inline;
+}
+
+.à-confirmer input {
+  float: center;
+}
+
+.dernier {
+  padding-left: 50px;
+  margin-bottom: 50px;
+}
+  
+
+
+/* layout */
+.identite, .demande, .installateur, .client, .materiel, .à-confirmer {
+  margin: 10px 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  width: 50%;
+}
+
+.col-small {
+  width: 30%;
+}
+
+.col-large {
+  width: 70%;
+}
+
+#cadre-gris {
+  background-color: #e6eaec;
+  padding: 20px 20px 20px 20px;
+  line-height: 30px;
+  border-radius: 20px 0 0 20px;
+}
+
+#cadre-gris .input-cadre {
+  padding: 8px 15px;
+  border: 1px solid #3d3c3d;
+  background-color: #fff;
+  margin-left: 20px;
+  width: 50%;
+}
+
+.à-confirmer {
+  background-color: #e6eaec;
+  height: auto;
+  padding: 20px;
+  padding-left: 50px;
+  line-height: 30px;
+  margin-left: 0;
+  border-radius: 0 20px 20px 0;
+}
+
+/* type */
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  color:#74b700;
+  font-size: 26px;
+  font-weight: normal;
+}

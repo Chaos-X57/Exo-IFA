@@ -1,0 +1,374 @@
+* {
+  font-family: Avenir, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  text-align: justify;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background: #060e1b;
+  background-color: #060e1b;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  position: absolute;
+  left: 12%;
+  width: 75%;
+}
+
+/*HEADER & FOOTER*/
+header, footer {
+  width: 100%;
+  padding: 20px 0px;
+  background: url("../images/star.jpg") #4f4f4f;
+  box-shadow: 0px 0px 15px #333;
+}
+
+header {
+  border-bottom: 2px solid #fff;
+  height: 120px;
+}
+
+header, h1, h2 {
+  color: white;
+  font-size: 2vw;
+  width: 90%;
+  line-height: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer {
+  border-top: 2px solid #fff;
+}
+
+footer p {
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+}
+
+/*SECTIONS*/
+section {
+  display: flex; 
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 20px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px #bbb;
+  background-color: #fff;
+}
+
+section h2 {
+  margin: 20px 0;
+  width: 90%;
+  font-size: 1.5em;
+  color: red;
+}
+
+section > div {
+  width: 90%;
+}
+
+/*SECTION INFOS*/
+.photo {
+  width: 100%;
+  text-align: center;
+  background-image: url("../images/css-twitter.jpg");
+}
+
+#imge {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #fff;
+  box-shadow: 0px 0px 10px #777;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: -8px;
+  background-image: url("../images/moi.jpg");
+  background-size: cover;
+}
+
+.prez {
+  border-bottom: 2px dashed #ccc;
+}
+
+.prez h2 {
+  padding-left: 50px;
+}
+
+.contact h2 {
+  padding-left: 50px;
+}
+
+.prez a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 10px auto 30px auto;
+  color: #fff;
+  background-color: #EA0;
+  box-shadow: 0px 0px 10px #ccc;
+  border-radius: 5px;
+}
+
+.contact-flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.contact-flex p:first-child {
+  flex: 0 0 40%;
+}
+.contact-flex p:last-child {
+  flex: 0 0 60%;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px auto 0px auto;
+}
+
+.social img {
+  width: 50px;
+  height: 50px;
+}
+
+/*SECTION EXP ET FORMATION*/
+.exp {
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.exp-info {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.exp-logo {
+  flex: 0 0 25%;
+  max-width: 100px;
+}
+
+.exp-info {
+  flex: 0 0 70%;
+  margin-left: auto;
+}
+
+.exp-info h3, h4 {
+  margin-bottom: 10px;
+}
+
+.exp-info span {
+  color: #f28835;
+}
+
+.exp-info h4:nth-child(3) {
+  color: #5398E3;
+}
+
+.dat {
+  color: #5398E3;
+}
+
+.exp-desc strong {
+  color: #f28835;
+}
+
+.exp #logox {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/etoile.png");
+  background-size: 62%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.exp #logos {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/diplom.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.exp h3 {
+  font-size:  1.2em;
+}
+
+.exp h4 {
+  font-size:  1em;
+  font-weight: normal;
+}
+
+/*SECTION COMPETENCES*/
+.h3gauche {
+  width: 90%;
+  margin: 10px;
+}
+
+.comp {
+  display:flex;
+  flex-flow: row wrap;
+  margin-bottom: 10px;
+}
+
+.comp p {
+  flex: 0 0 40%;
+}
+
+.conteneur-barre {
+  flex: 0 0 60%;
+  border-radius: 5px;
+  background-color: grey;
+  border-bottom: 1px ridge grey;
+}
+
+.barre {
+  display: block;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.c85 {
+  width: 85%;
+  background-color: #5398E3;
+}
+
+.c90 {
+  width: 90%;
+  background-color: #5398E3;
+}
+
+.c95 {
+  width: 95%;
+  background-color: #5398E3;
+}
+
+.c100 {
+  width: 100%;
+  background-color: #5398E3;
+  border-radius: 5px;
+}
+
+.comp2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.conteneur-barre2 {
+  flex: 0 0 100%;
+  height: 0.5em;
+  margin-bottom: 0.25em;
+  border-radius: 5px;
+  background-color: grey;
+}
+
+/*SECTION INTERETS*/
+.interet {
+  flex: 0 1 50%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.interet img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px #555;
+  
+}
+
+/*VERSION BUREAU DU CV*/
+@media screen and (min-width: 980px) {
+
+  section {
+      width: 80%;
+      box-shadow: 0px 0px 10px #bbb;
+  }
+
+  a:hover {
+      color: #EA0;
+  }
+
+  header h1{
+      width: 80%;
+  }
+
+  .prez, .contact {
+      flex: 0 0 45%;
+  }
+
+  .prez {
+      border-bottom: none;
+      border-right: 2px solid #ccc;
+      padding-right: 20px;
+      margin-left: auto;
+  }
+
+  .contact {
+      padding-left: 20px;
+      margin-right: auto;
+  }
+
+  .prez a {
+      border: 2px solid transparent;
+  }
+
+  .prez a:hover {
+      color: #f28835;
+      background-color: #fff;
+      border: 2px solid #f28835;
+      box-shadow: 0px 0px 20px #666;
+  }
+
+  .exp-logo {
+      flex: 0 0 10%;
+  }
+
+  .exp-info, .exp-desc {
+      flex: 0 0 85%;
+      margin-left: auto;
+  }
+
+  .interet {
+      flex: 0 1 25%;
+  }
+}
+
+canvas {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  opacity: 1;
+}

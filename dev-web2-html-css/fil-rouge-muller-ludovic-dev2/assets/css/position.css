@@ -1,0 +1,639 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background: #060e1b;
+  background-color: #060e1b;
+}
+
+h1 {
+  color: white;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+#div1 {
+  position: absolute;
+  left: 30%;
+  width: 40vw;
+  height: 30vw;
+}
+
+.container1 {
+  width: 40vw;
+  height: 30vw;
+  border: 1px solid white;
+  margin: 5% auto;
+  background-image: url("../images/rasor1.jpg");
+  background-size: cover;
+}
+
+.container1:hover {
+  background-image: url("../images/rasor2.gif");
+}
+
+#part1 {
+  width: 30vw;
+  height: 22vw;
+  border: 1px solid white;
+  margin: 10% auto;
+  background-image: url("../images/diluc1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#part1:hover {
+  background-image: url("../images/diluc2.gif");
+}
+
+#part2 {
+  width: 20vw;
+  height: 14vw;
+  border: 1px solid white;
+  margin: 14% auto;
+  background-image: url("../images/xiao1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#part2:hover {
+  background-image: url("../images/xiao2.gif");
+}
+
+#part3 {
+  width: 10vw;
+  height: 6vw;
+  border: 1px solid white;
+  margin: 20% auto;
+  background-image: url("../images/zong1.jpg");
+  background-size: cover;
+}
+
+#part3:hover {
+  background-image: url("../images/zong2.gif");
+  background-position: center;
+}
+
+#div2 {
+  position: absolute;
+  left: 30%;
+  top: 40vw;
+  width: 40vw;
+  height: 30vw;
+}
+
+.container2 {
+  width: 40vw;
+  height: 30vw;
+  border: 1px solid white;
+  margin: 5% auto;
+  background-image: url("../images/hack1.jpg");
+  background-size: cover;
+}
+
+.container2:hover {
+  background-image: url("../images/hackgif1.gif");
+}
+
+#part4 {
+  position: relative;
+  right: 7%; bottom: 7%;
+  width: 30vw;
+  height: 20vw;
+  border: 1px solid white;
+  margin: 10% auto;
+  background-image: url("../images/hack2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#part4:hover {
+  background-image: url("../images/hackgif2.gif");
+}
+
+#part5 {
+  position: relative;
+  left: 20%;
+  width: 25vw;
+  height: 10vw;
+  border: 1px solid white;
+  margin: 16% auto;
+  background-image: url("../images/hack3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#part5:hover {
+  background-image: url("../images/hackgif3.gif");
+}
+
+#part6 {
+  position: relative;
+  right: 65%;
+  width: 20vw;
+  height: 5vw;
+  border: 1px solid white;
+  margin: 10% auto;
+  background-image: url("../images/hack4.jpg");
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position-x: 30%;
+  background-position-y: 20%;
+}
+
+#part6:hover {
+  background-image: url("../images/hackgif4.gif");
+  background-position: center;
+}
+
+#div3 {
+  position: absolute;
+  left: 30%;
+  top: 80vw;
+  width: 40vw;
+  height: 30vw;
+}
+
+.container3 {
+  width: 40vw;
+  height: 30vw;
+  border: 1px solid white;
+  margin: 5% auto;
+  background-image: url("../images/ff1.jpg");
+  background-size: cover;
+}
+
+.container3:hover {
+  background-image: url("../images/ffgif1.gif");
+}
+
+#part7 {
+  position: absolute;
+  left: 5%; right: 5%;
+  width: 35vw;
+  height: 15vw;
+  border: 1px solid white;
+  margin: 5% auto;
+  background-image: url("../images/ff2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#part7:hover {
+  background-image: url("../images/ffgif2.gif");
+}
+
+#part8 {
+  width: 30vw;
+  height: 10vw;
+  border: 1px solid white;
+  margin: 7% auto;
+  background-image: url("../images/ff3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 20%;
+}
+
+#part8:hover {
+  background-image: url("../images/ffgif3.gif");
+}
+
+#part9 {
+  position: absolute;
+  top: 90%; left: 35%;
+  width: 8vw;
+  height: 8vw;
+  border: 1px solid white;
+  margin: 4vw auto;
+  background-image: url("../images/ff4.jpg");
+  background-size: cover;
+}
+
+#part9:hover {
+  background-image: url("../images/ffgif4.gif");
+  background-position: center;
+}
+
+#div4 {
+  position: absolute;
+  left: 30%;
+  top: 120vw;
+  width: 40vw;
+  height: 30vw;
+}
+
+.container4 {
+  width: 40vw;
+  height: 30vw;
+  border: 1px solid white;
+  margin: 5% auto;
+  background-image: url("../images/one1.jpg");
+  background-size: cover;
+  background-position-y: 20%;
+}
+
+.container4:hover {
+  background-image: url("../images/onegif1.gif");
+}
+
+#part10 {
+  position: absolute;
+  left: 30%;
+  width: 8vw;
+  height: 8vw;
+  border: 1px solid white;
+  margin: 30% auto;
+  background-image: url("../images/one2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#part10:hover {
+  background-image: url("../images/onegif2.gif");
+  background-position-x: 20%;
+}
+
+#part11 {
+  width: 4vw;
+  height: 4vw;
+  border: 1px solid white;
+  margin: 25% auto;
+  background-image: url("../images/one3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#part11:hover {
+  background-image: url("../images/onegif3.gif");
+  background-position-x: 30%;
+}
+
+#part12 {
+  position: absolute;
+  left: 120%;
+  width: 4vw;
+  height: 4vw;
+  border: 1px solid white;
+  margin: 100% auto;
+  background-image: url("../images/one4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#part12:hover {
+  background-image: url("../images/onegif4.gif");
+  background-position: center;
+}
+
+#part13 {
+  position: absolute;
+  left: -20.6vw;
+  bottom: 400%;
+  width: 38vw;
+  height: 10vw;
+  border: 1px solid white;
+  margin: 0 auto;
+  background-image: url("../images/one5.jpg");
+  background-size: cover;
+  background-position-y: 20%;
+}
+
+#part13:hover {
+  background-image: url("../images/onegif5.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#div5 {
+  position: absolute;
+  left: 30%;
+  top: 160vw;
+  width: 40vw;
+  height: 40vw;
+}
+
+.container5 {
+  width: 40vw;
+  height: 40vw;
+  border: 1px solid white;
+  margin: 5% auto;
+  background-image: url("../images/madara1.jpg");
+  background-size: cover;
+}
+
+.container5:hover {
+  background-image: url("../images/madaragif1.gif");
+}
+
+#part14 {
+  position: relative;
+  width: 35vw;
+  height: 35vw;
+  border: 1px solid white;
+  margin: 6% auto;
+  background-image: url("../images/madara2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#part14:hover {
+  background-image: url("../images/madaragif2.gif");
+}
+
+#part15 {
+  position: relative;
+  right: 24%;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: 4vw auto;
+  background-image: url("../images/madara3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#part15:hover {
+  background-image: url("../images/madaragif3.gif");
+}
+
+#part16 {
+  position: relative;
+  left: 141%;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: -0.5% auto;
+  background-image: url("../images/madara4.jpg");
+  background-size: cover;
+}
+
+#part16:hover {
+  background-image: url("../images/madaragif4.gif");
+  background-position: center;
+}
+
+#part17 {
+  position: relative;
+  right: 0.5%;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: 130% auto;
+  background-image: url("../images/madara5.jpg");
+  background-size: cover;
+}
+
+#part17:hover {
+  background-image: url("../images/madaragif5.gif");
+}
+
+#part18 {
+  position: relative;
+  right: 16.9vw;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: -1% auto;
+  background-image: url("../images/madara6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#part18:hover {
+  background-image: url("../images/madaragif6.gif");
+}
+
+#div6 {
+  position: absolute;
+  left: 30%;
+  top: 210vw;
+  width: 40vw;
+  height: 40vw;
+}
+
+.container6 {
+  width: 40vw;
+  height: 40vw;
+  padding-left: 48px;
+  border: 1px solid white;
+  margin: 5% auto;
+  background-image: url("../images/nagato1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.container6:hover {
+  background-image: url("../images/nagatogif1.gif");
+}
+
+#part19 {
+  position: absolute;
+  right: 7.5%;
+  width: 34vw;
+  height: 34vw;
+  padding-top: 10px;
+  padding-left: 10px;
+  border: 1px solid white;
+  margin: 7% auto;
+  background-image: url("../images/nagato2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#part19:hover {
+  background-image: url("../images/nagatogif2.gif");
+  background-position: center;
+}
+
+#part20 {
+  position: relative;
+  right: 22%;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: 12% auto;
+  background-image: url("../images/nagato3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#part20:hover {
+  background-image: url("../images/nagatogif3.gif");
+  background-position: center;
+}
+
+#part21 {
+  position: relative;
+  bottom: 38%;
+  right: 15%;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: 0 auto;
+  background-image: url("../images/pain1.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+}
+
+#part21:hover {
+  background-image: url("../images/paingif1.gif");
+  background-position: center;
+}
+
+#part22 {
+  position: relative;
+  left: 3.8vw;
+  bottom: 16.5vw;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: 0 auto;
+  background-image: url("../images/pain2.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+#part22:hover {
+  background-image: url("../images/paingif2.gif");
+}
+
+#part23 {
+  position: relative;
+  left: 6.4vw;
+  bottom: 26.2vw;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: 0 auto;
+  background-image: url("../images/pain3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#part23:hover {
+  background-image: url("../images/paingif3.gif");
+}
+
+#div7 {
+  position: absolute;
+  left: 0%;
+  top: 50vw;
+  width: 40vw;
+  height: 40vw;
+}
+
+.container7 {
+  width: 40vw;
+  height: 40vw;
+  border: 1px solid white;
+  margin: 5% auto;
+  background-image: url("../images/bleach1.jpg");
+  background-size: cover;
+}
+
+.container7:hover {
+  background-image: url("../images/bleachgif1.gif");
+}
+
+#part24 {
+  position: relative;
+  width: 35vw;
+  height: 10vw;
+  border: 1px solid white;
+  margin: 38% auto;
+  background-image: url("../images/bleach2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#part24:hover {
+  background-image: url("../images/bleachgif2.gif");
+  background-position: center;
+}
+
+#part25 {
+  position: relative;
+  float: left;
+  left: 2.45vw;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: 8% auto;
+  background-image: url("../images/bleach3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#part25:hover {
+  background-image: url("../images/bleachgif3.gif");
+}
+
+#part26 {
+  position: relative;
+  left: 11.85vw;
+  bottom: 0.1vw;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: 0 auto;
+  background-image: url("../images/bleach4.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#part26:hover {
+  background-image: url("../images/bleachgif4.gif");
+  background-position: center;
+}
+
+#part27 {
+  position: relative;
+  right: 0.45vw;
+  bottom: 15.25vw;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: 0 auto;
+  background-image: url("../images/bleach5.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#part27:hover {
+  background-image: url("../images/bleachgif5.gif");
+}
+
+#part28 {
+  position: relative;
+  float: right;
+  left: 12vw;
+  bottom: 0.1vw;
+  width: 12vw;
+  height: 12vw;
+  border: 1px solid white;
+  margin: 0 auto;
+  background-image: url("../images/bleach6.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#part28:hover {
+  background-image: url("../images/bleachgif6.gif");
+}
+
+canvas {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  opacity: 1;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Images en HTML</title>
+</head>
+
+<body>
+  <h1>Les images en HTML</h1>
+
+  <!-- la balise img a toujours 2 attributs : src et alt, on peut éventuellement contrôler la taille en précisant width="" et/ou height="" -->
+  <img src="images/astronaut.jpg" alt="Image d'un astronaute" width="50%" />
+
+  <p>le texte alternatif est utile :</p>
+  <ul>
+    <li>en cas de lien brisé avec le fichier de l'image</li>
+    <li>pour le référencement du site (SEO)</li>
+    <li>pour les malvoyants et les non-voyants qui utilisent des technologie de lecteur d'écran</li>
+  </ul>
+
+  <!-- balise de description d'une image/d'un shéma, avec figure et figcaption pour la légende -->
+  <figure>
+    <img src="images/astronaut.jpg" alt="Image d'un astronaute" width="50%" />
+    <figcaption>Un astronaute dans l'espace avec la terre en arrière plan</figcaption>
+  </figure>
+
+</body>

@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+#slideshow {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin:  20px auto;
+	overflow: hidden;
+}
+
+/* jouer avec ça pour la taille des images ! */
+#sContent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	margin: 0;
+	padding: 0;
+	
+	animation-name: AutoSlide;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+#sContent li {
+	display: inline;
+}
+
+@keyframes AutoSlide {
+	0% {
+		left: 0px; /*1ère image*/
+	}
+	15% {
+		left: 0px; /*idem pour attente*/
+	}
+	35% {
+		left: -150px; /*2ème image*/
+	}
+	50% {
+		left: -150px; /*idem pour attente*/
+	}
+	70% {
+		left: -300px; /*3ème image*/
+	}
+	85% {
+		left: -300px; /*idem pour attente*/
+	}
+	100% {
+		left: 0px; /*1ère image*/
+	}
+}
